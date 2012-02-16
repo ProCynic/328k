@@ -1,0 +1,222 @@
+
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 4: 1.26-1.27, 1.29-1.37\\
+M328K \\
+January 31st, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{1}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{25}
+
+%%%%%%%%%%%%1.26%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Prove the existence part of the Division Algorithm. (\textit{Hint}:
+Given $n$ and $m$, how will you define $q$?  Once you choose this
+$q$, then how is $r$ chosen?  Then show that $0 \leq r \leq n-1$.)
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.27%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Prove the uniqueness part of the Division Algorithm.
+
+(\textit{Hint}: If $nq + r = nq' + r'$, then $nq -nq' = r' - r$. Use
+what you know about $r$ and $r'$ as part of your argument that $q =
+q'$.)
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{28}
+
+%%%%%%%%%%%%1.29%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+Do every two integers have at least one common divisor?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%%%%%%%%%%1.30%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+Can two integers have infinitely many common divisors?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%%%%%%%%%%1.31%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find the following greatest common divisors. Which pairs are
+relatively prime?
+\begin{enumerate}
+    \item[(1)] $(36,22)$
+    \item[(2)] $(45,-15)$
+    \item[(3)] $(-296,-88)$
+    \item[(4)] $(0,256)$
+    \item[(5)] $(15,28)$
+    \item[(6)] $(1,-2436)$
+\end{enumerate}
+\end{exer}
+
+%%%%%%%%%%%%1.32%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $n$, $b$, $r$, and $k$ be integers. If $a = nb + r$ and
+$k|a$ and $k|b$, then $k|r$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.33%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, $n_1$, and $r_1$ be integers with $a$ and $b$ not both
+$0$. If $a = n_1b + r_1$, then $(a, b) = (b , r_1)$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.34%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+ As an illustration of the above theorem, note that
+\begin{align*}
+51 & = 3 \cdot 15 + 6, \\
+15 & = 2 \cdot 6 + 3, \\
+6 & = 2 \cdot 3 + 0.
+\end{align*}
+Use the preceding theorem to show that if $a = 51$ and $b = 15$,
+then $(51, 15) = (6, 3) = 3$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%%%%%%%%%%1.35%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}[Euclidean Algorithm]\index{Euclidean Algorithm} Using the
+previous theorem and the Division Algorithm successively, devise a
+procedure for finding the greatest common divisor of two integers.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%%%%%%%%%%1.36%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Use the Euclidean Algorithm to find \end{exer}
+\begin{enumerate}
+    \item[(1)] $(96, 112)$
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(2)] $(175,24)$
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(3)] $(0,256)$
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(4)] $(-288, -166)$
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(5)] $(1,-2436)$
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+\end{enumerate}
+
+%%%%%%%%%%%%1.37%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find integers $x$ and $y$ such that $175x + 24y = 1$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+\end{document}
