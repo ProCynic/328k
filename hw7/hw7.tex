@@ -1,7 +1,6 @@
-
 \documentclass[12pt,leqno]{article}
 
-\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref,cancel}
 
 
 \textheight=8.5truein
@@ -41,6 +40,9 @@
 \newcommand{\ord}{\operatorname{ord}}
 \def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
 
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
+
 
 \makeindex
 
@@ -51,7 +53,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker \\
 HW 7: 2.1-2.5, 2.7-2.9\\
 M328K \\
 February 9th, 2012 \\}}
@@ -79,7 +81,11 @@ prime $p$ such that $p|n$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number greater than $1$.  We will show that there exists a prime $p$ such that $p \mid n$.  This will be a proof by induction.  As our base case, take $n = 2$.  Since $n$ is prime, let $p = n$, and so $p$ is prime and $p \mid n$.  Our induction hypothesis is that there exists some natural number $N > 1$ such that for all $q$ such that $1 < q <= N$, there exists a $p$ such that $p$ is prime and $p \mid q$.  Now consider two cases:\\
+\\
+Case 1: For all integers $x$, such that $1 < x \leq N$, $x \nmid N+1$.  In this case, because there are no integers other than 1 and itself that divide $N+1$, $N+1$ is prime.  Simply let $p = N+1$ and now $p \mid N+1$ and $p$ is prime.\\
+\\
+Case 2: There exists some integer $x$ such that $1 < x \leq N$ and $x \mid N+1$.  In this case, by the induction hypothesis there is some prime $p$ such that $p \mid x$.  Since $p \mid x$ and $x \mid N+1$, then $p \mid N+1$.
 \end{proof}
 
 %%%Exercise 2.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,9 +97,11 @@ whether each number you select is prime or not.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.\\
+Wrote down all the primes up to 41 simply by considering whether each odd number has a divisor other than 1 or itself.  After 41, this got hard, so I did the Sieve of Eratosthenes on a piece of paper.
 \end{proof}
 
+\pagebreak
 %%%Theorem 2.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{thm}
@@ -102,7 +110,11 @@ A natural number $n>1$ is prime if and only if for all primes $p
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Consider a natural number $n > 1$.  We will show that $n$ is prime if and only if for all primes $p \leq \sqrt{n}$, $p$ does not divide $n$.  Since this is an if and only if statement, this will be a two stage proof.\\
+\\
+First, assume for all primes $p \leq \sqrt{n}$, $p$ does not divide $n$. Assume by way of contradiction that $n$ is composite.  This means that there must be natural numbers $i_0$ and $j_0$ greater than 1 and less than $n$ such that $n = i_0j_0$ and there is no prime that divides either $i_0$ or $j_0$.  Since $n = i_0j_0$, either $i_0$ or $j_0$ must be less than or equal to $\sqrt{n}$.  So assume without loss of generality that $i_0 \leq \sqrt{n}$.  Now we can repeat this argument to find some integers $i_1$ and $j_1$ such that $i_0 = i_1j_1$ and $1 < i_1 \leq \sqrt{i_0}$.  We can see that this sequence of $i$'s is approaching the minimal value, which is 2.  However, this is a contradiction, because each $i$ divides $n$ and there is no prime that divides $n$ and 2 is prime.  Therefore $n$ must be prime.\\
+\\
+Now, assume that $n$ is prime.  Since $n$ is prime, there are no numbers $q$ such that $q \mid n$ unless $q$ is 1 or $n$.  Therefore for all primes $p \leq \sqrt{n}$, $p$ does not divide $n$.
 \end{proof}
 
 %%%Exercise 2.4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,7 +124,7 @@ Use the preceding theorem to verify that $101$ is prime.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+First, $10 < \sqrt{101} < 11$.  The primes less than 11 are: 2, 3, 5, 7.  So we can see that for all $p$ in \{2, 3, 5, 7\}, $p \nmid 101$.  Therefore by theorem 2.3 101 is prime.
 \end{proof}
 
 
@@ -131,22 +143,24 @@ circled numbers all the primes less than $100$?
 
 %%% Note: I recommend printing this and crossing off the multiples of primes by hand. 
 %% For the electronic version, you can just list the circled primes. Or, if you want to get fancy, 
-% you can use \cancel{2} to cross out multiples. That one, for example, would put a line through 2. 
+% you can use $\cancel{2}$ to cross out multiples. That one, for example, would put a line through 2. 
 % The trick is, you have to be in math mode, so it's a little annoying!
-
+\pagebreak
 \begin{proof}[Solution] $\phantom{fasdf}$ \vskip.01in
 \begin{tabular}{cccccccccc}
-1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
-11 & 12 & 13 & 14 & 15 &  16 & 17 & 18 & 19 & 20\\
-21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30\\
-31 & 32 & 33 & 34 & 35 & 36 & 37 & 38 & 39 & 40\\
-41 & 42 & 43 & 44 & 45 & 46 & 47 & 48 & 49 & 50\\
-51 & 52 & 53 & 54 & 55 & 56 & 57 & 58 & 59 & 60\\
-61 & 62 & 63 & 64 & 65 & 66 & 67 & 68 & 69 & 70\\
-71 & 72 & 73 & 74 & 75 & 76 & 77 & 78 & 79 & 80\\
-81 & 82 & 83 & 84 & 85 & 86 & 87 & 88 & 89 & 90\\
-91 & 92 & 93 & 94 & 95 & 96 & 97 & 98 & 99 & 100\\
+1 & 2 & 3 & $\cancel{4}$ & 5 & $\cancel{6}$ & 7 & $\cancel{8}$ & $\cancel{9}$ & $\cancel{10}$\\
+11 & $\cancel{12}$ & 13 & $\cancel{14}$ & $\cancel{15}$ &  $\cancel{16}$ & 17 & $\cancel{18}$ & 19 & $\cancel{20}$\\
+$\cancel{21}$ & $\cancel{22}$ & 23 & $\cancel{24}$ & $\cancel{25}$ & $\cancel{26}$ & $\cancel{27}$ & $\cancel{28}$ & 29 & $\cancel{30}$\\
+31 & $\cancel{32}$ & $\cancel{33}$ & $\cancel{34}$ & $\cancel{35}$ & $\cancel{36}$ & 37 & $\cancel{38}$ & $\cancel{39}$ & $\cancel{40}$\\
+41 & $\cancel{42}$ & 43 & $\cancel{44}$ & $\cancel{45}$ & $\cancel{46}$ & 47 & $\cancel{48}$ & $\cancel{49}$ & $\cancel{50}$\\
+$\cancel{51}$ & $\cancel{52}$ & 53 & $\cancel{54}$ & $\cancel{55}$ & $\cancel{56}$ & $\cancel{57}$ & $\cancel{58}$ & 59 & $\cancel{60}$\\
+61 & $\cancel{62}$ & $\cancel{63}$ & $\cancel{64}$ & $\cancel{65}$ & $\cancel{66}$ & 67 & $\cancel{68}$ & $\cancel{69}$ & $\cancel{70}$\\
+71 & $\cancel{72}$ & 73 & $\cancel{74}$ & $\cancel{75}$ & $\cancel{76}$ & $\cancel{77}$ & $\cancel{78}$ & 79 & $\cancel{80}$\\
+$\cancel{81}$ & $\cancel{82}$ & 83 & $\cancel{84}$ & $\cancel{85}$ & $\cancel{86}$ & $\cancel{87}$ & $\cancel{88}$ & 89 & $\cancel{90}$\\
+$\cancel{91}$ & $\cancel{92}$ & $\cancel{93}$ & $\cancel{94}$ & $\cancel{95}$ & $\cancel{96}$ & 97 & $\cancel{98}$ & $\cancel{99}$ & $\cancel{100}$\\
 \end{tabular}$\phantom{fasdf}$ \vskip.01in
+Circled: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.\\
+The circled numbers are prime because all the numbers that are divided by primes less than 10 are crossed out.  By theorem 2.3, this means that the crossed out numbers are not prime and the ones left are.
 \end{proof}
 
 
@@ -163,7 +177,11 @@ primes $p_1, p_2, \hdots, p_m$ and natural numbers $r_1, r_2,
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number greater than 1.  This will be a proof by induction.  As a base case, take $n = 2$.  In this case, $n = 2^1$, so our theorem holds.  Our induction hypothesis will be that there exists some natural number $N$ such that $N \geq 2$ and for all integers $q$ where $2 \leq q \leq N$, $q$ is either prime or a finite product of primes.  Now, by theorem 2.1 there exists some prime $p$ such that $p \mid N+1$.  By the definition of divides, there exists some integer $k$ such that $N+1 = pk$.  Since $N+1 > 0$ and $p > 0$, $k$ must also be greater than 0.  So we now have two cases:\\
+\\
+Case 1: $k = 1$.  In this case, $N+1$ is prime, so we are done.\\
+\newpage
+Case 2: $k > 1$:  In this case, we know that $p$ and $k$ are both less than $N+1$.  So by our induction hypothesis $k$ a finite product of primes.  Let us say that $k = a_1^{b_1}a_2^{b_2}\cdots a_m^{b_m}$ for distinct primes $a_1, a_2, \hdots a_m$ and natural numbers $b_1, b_2, \hdots, b_m$.  Then if there exists some $j$ such that $p = a_j$, $N+1 = a_1^{b_1}a_2^{b_2}\cdots a_j^{b_j+1}\cdots a_m^{b_m}$ and so $N+1$ is a finite product of primes.  If such a $j$ does not exists, then $N+1 = pa_1^{b_1}a_2^{b_2}\cdots a_m^{b_m}$ and $N+1$ is a finite product of primes.
 \end{proof}
 
 
@@ -176,10 +194,10 @@ for some $i$.
 \end{lem}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $p$ and $q_1, q_2, \hdots, q_n$ all be primes and let $k$ be a natural number such that $p k = q_1q_2 \cdots q_n$.  Since $pk = q_1q_2 \cdots q_n$, then by the definition of divides $p \mid q_1q_2 \cdots q_n$.  This in turn implies that there exists some $i$ such that $p \mid q_i$.  However, since $q_i$ is prime, the only numbers that divide it are 1 and itself.  And since $p$ is prime, $p$ cannot be 1.  Therefore $p = q_i$.
 \end{proof}
 
-
+\pagebreak
 %%%Theorem 2.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{thm}[Fundamental Theorem of Arithmetic-Uniqueness part]
@@ -202,7 +220,11 @@ for the ordering of the factors.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number.  Let $\{p_1, p_2, \hdots, p_m\}$ and $\{q_1, q_2, \hdots, q_s\}$ be sets of primes with $p_i \neq p_j$ if $i \neq j$ and $q_i \neq q_j$ if $i \neq j$. Let $\{r_1, r_2, \hdots, r_m\}$ and $\{t_1, t_2, \hdots, t_s\}$ be sets of natural numbers such that
+\begin{align*}
+n & = p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m} \\
+  & = q_1^{t_1}q_2^{t_2}\cdots q_s^{t_s}.
+\end{align*}
+Let $P = \{p_1, p_2, \hdots, p_m\}$ and let $Q = \{q_1, q_2, \hdots, q_s\}$.  Now, for any integer $i$ where $1 \leq i \leq s$, we have $n = q_i \times q_1^{t_1}q_2^{t_2}\cdots q_i^{t_i-1} \cdots q_s^{t_s}$.  If we let $k = q_1^{t_1}q_2^{t_2}\cdots q_i^{t_i-1} \cdots q_s^{t_s}$, then $k$ is an integer.  So $q_ik = p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m}$.  By lemma 2.8,this means that $q_i = p_j$ for some $j$. Therefore every $q$ is an element of $P$.  By equivalent logic, we can show that every $p$ is an element of $Q$ also.  Therefore $P = Q$, which implies that $m = s$, since these are the respective cardinalities of equivalent sets.  Now assume by way of contradiction that for any number of pairs natural numbers $\pair{i \leq m}{j \leq m}$ we have $p_i = q_j$ and $r_i \neq t_i$.  This means that for one specific pair $\pair{i_0}{j_0}$ it must be that $p_{i_0}^{\card{r_{i_0}-t_{j_0}}}$ is equal to the multiplicitve reduction of $p_i^{\card{r_i-t_j}}$ for all other $\pair{i}{j}$.  That is, the difference in exponents for any one prime is balanced by the differences in the exponents of the other primes.  By the same logic that we used above to show that $P = Q$, we see that $p_{i_0}$ must be in the set of other $p_i$'s.  But each prime is unique, so this is a contradiction.  Therefore if $p_i = q_j$ then $r_i = t_j$.
 \end{proof}
-
 \end{document}
