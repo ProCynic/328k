@@ -1,7 +1,7 @@
 
 \documentclass[12pt,leqno]{article}
 
-\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref,enumerate}
 
 
 \textheight=8.5truein
@@ -41,6 +41,8 @@
 \newcommand{\ord}{\operatorname{ord}}
 \def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
 
+\newcommand{\card}[1]{\left| #1 \right|}
+
 
 \makeindex
 
@@ -51,8 +53,8 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
-HW 4: 1.26-1.27, 1.29-1.37\\
+\large{\textbf{Geoffrey Parker - grp352 \\
+HW 4: 1.29-1.37\\
 M328K \\
 January 31st, 2012 \\}}
 \end{flushright}
@@ -80,8 +82,10 @@ $q$, then how is $r$ chosen?  Then show that $0 \leq r \leq n-1$.)
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ and $m$ be natural numbers.  Let $S$ be the set of natural numbers of the form $m-nk + 1$ for some integer $k$.  Since $m$ is a natural number, $S$ always has at least one member, $m-n0 + 1$.  Therefore by the Well-Ordering Axiom for the natural numbers, there exists a smallest element of the set $S$.  Let $q$ be an integer such that $m-nq + 1$ is this smallest element.  Let $r = m - nq$.  So $m = nq + r$.  Now we will show that $0 \leq r \leq n-1$.  Since $r$ is defined to be drawn from a  subset of the natural numbers, $r \geq 0$.  Assume by way of contradiction that $r \geq n$.  This would mean that $m - nq \geq n$, or $m - nq - n \geq 0$.  So $m - n(q+1) \geq 0$, which makes $m - n(q+1) + 1$ an element of $S$.  But $m - n(q+1) + 1 < m - nq + 1$, which is a contradiction, since $m - nq + 1$ is the smallest element of $S$.  Therefore $r < n$, or, since $r$ and $n$ are integers, $r \leq n-1$.  So we have proved that $0 \leq r \leq n-1$.
 \end{proof}
+
+NOTE TO READER: The well ordering axiom we have is only defined on the natural numbers, which is why there are +1's every time S is mentioned.
 
 %%%%%%%%%%%%1.27%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
@@ -93,20 +97,21 @@ q'$.)
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let there be integers $m,\ n,\ q,\ r,\ q',\ r'$ such that $m = nq +r$, $m = nq' + r'$, $0 \leq r \leq n$, and $0 \leq r' \leq n$.  Given this, $nq + r = nq' + r'$, or $r - r' = nq' - nq = n(q' - q')$, which means that $n \mid (r - r')$.  So by the definition of divides, there exists some integer $k$ such that $nk = r-r'$.  However, $\leq r \leq n$ and $0 \leq r' \leq n$, so $-n < r-r' < n$, which means that $k$ must be $0$ and $r-r'$ must be $0$.  Therefore $r = r'$.  Going back to  $r - r' = n(q' - q')$, we can say that $n(q' - q') = 0$.  Since $n$ is a natural number, and thus not $0$, $q' - q$ must be $0$.  Therefore $q = q'$.  
 \end{proof}
 
 %%%%%%%%%Now, set the theorem number to one less than the first theorem in
 %%%%%%%%%the assignment.
 \setcounter{thm}{28}
 
+\pagebreak
 %%%%%%%%%%%%1.29%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ques}
 Do every two integers have at least one common divisor?
 \end{ques}
 
 \begin{proof}[Solution]
-Type your solution here!
+Yes.  One divides every integer, so for any two integers $a$ and $b$, $1 \mid a$ and $1 \mid b$.
 \end{proof}
 
 %%%%%%%%%%%%1.30%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,7 +120,7 @@ Can two integers have infinitely many common divisors?
 \end{ques}
 
 \begin{proof}[Solution]
-Type your solution here!
+No.  For any two integers $a$ and $b$, any common divisor of $a$ and $b$ must divide $a$.  And all of $a$'s divisors must be between $-a$ and $a$, which is a finite range.  So it is impossible for two integers to have infinitely many common divisors.
 \end{proof}
 
 %%%%%%%%%%%%1.31%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,12 +128,12 @@ Type your solution here!
 Find the following greatest common divisors. Which pairs are
 relatively prime?
 \begin{enumerate}
-    \item[(1)] $(36,22)$
-    \item[(2)] $(45,-15)$
-    \item[(3)] $(-296,-88)$
-    \item[(4)] $(0,256)$
-    \item[(5)] $(15,28)$
-    \item[(6)] $(1,-2436)$
+    \item[(1)] $(36,22) = 2$
+    \item[(2)] $(45,-15) = 15$
+    \item[(3)] $(-296,-88) = 8$
+    \item[(4)] $(0,256) = 256$
+    \item[(5)] $(15,28) = 1$.  $15$ and $28$ are relatively prime.
+    \item[(6)] $(1,-2436) = 1$. $1$ and $-2436$ are relatively prime.
 \end{enumerate}
 \end{exer}
 
@@ -139,17 +144,18 @@ $k|a$ and $k|b$, then $k|r$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $n$, $b$, $r$, and $k$ be integers with $a = nb + r$ and $k|a$ and $k|b$. We will show that $k|r$.  First, because $k|a$ and $k|b$, then by the definition of divides $a = kj$ and $b = km$ for some integers $k$ and $m$.  So $kj = nkm + r$ and $kj - nkm = r$, which means that $r = k(j - nm)$.  Since $j$, $n$, and $m$ are integers, $j - nm$ is an integer.  Therefore, by the definition of divides, $k \mid r$.
 \end{proof}
 
+\pagebreak
 %%%%%%%%%%%%1.33%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $a$, $b$, $n_1$, and $r_1$ be integers with $a$ and $b$ not both
-$0$. If $a = n_1b + r_1$, then $(a, b) = (b , r_1)$.
+$0$. If $a = n_1b + r_1$, then $(a, b) = (b, r_1)$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, $n_1$, and $r_1$ be integers with $a$ and $b$ not both $0$ and $a = n_1b + r_1$.  We will show that $(a, b) = (b, r_1)$.  Let $d = (a, b)$.  By definition of greatest common divisor, $d$ is the largest integer such that $d \mid a$ and $d \mid b$.  By theorem 1.32, this means that $d \mid r_1$, so $d$ is a common divisor of $b$ and $r_1$. Suppose there were some other common divisor of $b$ and $r_1$ $x$, such that $x > d$.  This would mean $x \mid b$ and $x \mid r_1$, so by definition of divides, there exist integers $j$ and $k$ such that $b = xj$ and $r_1 = xk$.  This gives us $a = n_1xj + xk = x(n_1j + k)$.  Since $n_1j + k$ is an integer, $x \mid a$.  So $x$ is a common divisor of both $a$ and $b$.  However, we have already established that $d$ is the greatest common divisor of $a$ and $b$, and $x > d$.  We have a contradiction.  Therefore, $d$ is the greatest common divisor of $b$ and $r_1$, and so $(a, b) = (b, r_1)$.
 \end{proof}
 
 %%%%%%%%%%%%1.34%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,9 +171,10 @@ then $(51, 15) = (6, 3) = 3$.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+Since $51 = 3 \cdot 15 + 6$, then by theorem 1.33 $(51, 15) = (15, 6)$. And because $15 = 2 \cdot 6 + 3$, then by theorem 1.33 $(15, 6) = (6, 3)$.  Once again by theorem 1.33, because $6 = 2 \cdot 3 + 0$, $(6, 3) = (3, 0)$, which equals $3$.  So $(51, 15) = (6, 3) = 3$.
 \end{proof}
 
+\pagebreak
 %%%%%%%%%%%%1.35%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exer}[Euclidean Algorithm]\index{Euclidean Algorithm} Using the
 previous theorem and the Division Algorithm successively, devise a
@@ -175,7 +182,18 @@ procedure for finding the greatest common divisor of two integers.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+Given two integers $a$ and $b$ find $(a, b)$.
+\begin{enumerate}
+\item
+Let $i$ and $j$ be integers.  If $\card{a} \geq \card{b}$, let $i = a$ and $j = b$, otherwise let $i = b$ and $j = a$.
+\item
+If $j = 0$, then $(a, b) = i$.  Stop the procedure, you are finished.
+\item
+By the division algorithm, there exist integers $q$ and $r$ such that $i = jq + r$ where $0 \leq r \leq j-1$.  Find $q$ and $r$.
+\item
+By theorem 1.33, $(i, j) = (j, r)$.  If $r = 0$, then $(a, b) = \card{j}$.  Stop the procedure, you are finished. Otherwise, let $i = j$ and $j = r$ and goto step 3.
+
+\end{enumerate}
 \end{proof}
 
 %%%%%%%%%%%%1.36%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -183,40 +201,122 @@ Type your solution here!
 Use the Euclidean Algorithm to find \end{exer}
 \begin{enumerate}
     \item[(1)] $(96, 112)$
-    \begin{proof}[Solution]
-    Type your solution here!
+    \begin{proof}[Solution]$ $\\
+    \begin{enumerate}[1.]
+    \item
+    Let $i = 112$, $j = 96$.
+    \item
+    $j \neq 0$.
+    \item
+    $q = 0$, $r = 16$.
+    \item
+    $r \neq 0$ so $i = 96$ and $j = 16$.
+    \item
+    $q = 6$ and $r = 0$.
+    \item
+    $r = 0$ so $(96, 112) = 16$.
+    \end{enumerate}
     \end{proof}
 
-    \item[(2)] $(175,24)$
-    \begin{proof}[Solution]
-    Type your solution here!
+\pagebreak
+    \item[(2)] $(162, 31)$
+    \begin{proof}[Solution]$ $\\
+    \begin{enumerate}[1.]
+    \item
+    Let $i = 162$, $j = 31$.
+    \item
+    $j \neq 0$.
+    \item
+    $q = 5$, $r = 7$.
+    \item
+    $r \neq 0$ so $i = 31$ and $j = 7$.
+    \item
+    $q = 4$ and $r = 3$.
+    \item
+    $r \neq 0$ so $i = 7$ and $j = 3$.
+    \item
+    $q = 2$ and $r = 1$.
+    \item
+    $r \neq 0$ so $i = 3$ and $j = 1$.
+    \item
+    $q = 3$ and $r = 0$.
+    \item
+    $r = 0$ so $(162, 31) = 1$.
+    \end{enumerate}
     \end{proof}
 
     \item[(3)] $(0,256)$
-    \begin{proof}[Solution]
-    Type your solution here!
+    \begin{proof}[Solution]$ $\\
+    \begin{enumerate}[1.]
+    \item
+    Let $i = 256$ and $j = 0$
+    \item
+    $j = 0$.  $(0, 256) = 256$
+    \end{enumerate}
     \end{proof}
 
+\pagebreak
     \item[(4)] $(-288, -166)$
-    \begin{proof}[Solution]
-    Type your solution here!
+    \begin{proof}[Solution]$ $\\
+    \begin{enumerate}[1.]
+    \item
+    Let $i = -288$, $j = -166$.
+    \item
+    $j \neq 0$
+    \item
+    $q = 1$, $r = -122$.
+    \item
+    $r \neq 0$ so $i = -166$ and $j = -122$.
+    \item
+    $q = 1$ and $r = -44$.
+    \item
+    $r \neq 0$ so $i = -122$ and $j = -44$.
+    \item
+    $q = 2$ and $r = -34$.
+    \item
+    $r \neq 0$ so $i = -44$ and $j = -34$.
+    \item
+    $q = 1$ and $r = -10$.
+    \item
+    $r \neq 0$ so $i = -34$ and $j = -10$.
+    \item
+    $q = 3$ and $r = -4$.
+    \item
+    $r \neq 0$ so $i = -10$ and $j = -4$.
+    \item
+    $q = 2$ and $r = -2$.
+    \item
+    $r \neq 0$ so $i = -4$ and $j = -2$.
+    \item
+    $q = $ and $r = 0$.
+    \item
+    $r = 0$ so $(-288, -166) = 2$.
+    \end{enumerate}    
     \end{proof}
 
+\pagebreak
     \item[(5)] $(1,-2436)$
-    \begin{proof}[Solution]
-    Type your solution here!
+    \begin{proof}[Solution]$ $\\
+    \begin{enumerate}[1.]
+    \item
+    Let $i = -2436$ and $j = 1$
+    \item
+    $j \neq 0$
+    \item
+    $q = -2436$ and $r = 0$
+    \item
+    $r = 0$ so $(1, -2436) = 1$.
+    \end{enumerate}
     \end{proof}
 
 \end{enumerate}
 
 %%%%%%%%%%%%1.37%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exer}
-Find integers $x$ and $y$ such that $175x + 24y = 1$.
+Find integers $x$ and $y$ such that $162x + 31y = 1$.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+$162 \cdot 9 + 31 \cdot -47 = 1$.
 \end{proof}
-
-
 \end{document}
