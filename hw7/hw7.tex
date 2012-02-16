@@ -1,0 +1,208 @@
+
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 7: 2.1-2.5, 2.7-2.9\\
+M328K \\
+February 9th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{2}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{0}
+
+%%%Theorem 2.1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+If $n$ is a natural number greater than $1$, then there exists a
+prime $p$ such that $p|n$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Exercise 2.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Write down the primes less than $100$ without the aid of a
+calculator or a table of primes and think about how you decide
+whether each number you select is prime or not.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Theorem 2.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+A natural number $n>1$ is prime if and only if for all primes $p
+\leq \sqrt{n}$, $p$ does not divide $n$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Exercise 2.4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Use the preceding theorem to verify that $101$ is prime.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Exercise 2.5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}[Sieve of Eratosthenes]\index{Sieve of Eratosthenes}
+Write down all the natural numbers from $1$ to $100$, perhaps on a
+$10 \times 10$ array. Circle the number $2$, the smallest prime.
+Cross off all numbers divisible by $2$.  Circle $3$, the next number
+that is not crossed out.  Cross off all larger numbers that are
+divisible by $3$. Continue to circle the smallest number that is not
+crossed out and cross out its multiples. Repeat.  Why are the
+circled numbers all the primes less than $100$?
+\end{exer}
+
+
+%%% Note: I recommend printing this and crossing off the multiples of primes by hand. 
+%% For the electronic version, you can just list the circled primes. Or, if you want to get fancy, 
+% you can use \cancel{2} to cross out multiples. That one, for example, would put a line through 2. 
+% The trick is, you have to be in math mode, so it's a little annoying!
+
+\begin{proof}[Solution] $\phantom{fasdf}$ \vskip.01in
+\begin{tabular}{cccccccccc}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+11 & 12 & 13 & 14 & 15 &  16 & 17 & 18 & 19 & 20\\
+21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30\\
+31 & 32 & 33 & 34 & 35 & 36 & 37 & 38 & 39 & 40\\
+41 & 42 & 43 & 44 & 45 & 46 & 47 & 48 & 49 & 50\\
+51 & 52 & 53 & 54 & 55 & 56 & 57 & 58 & 59 & 60\\
+61 & 62 & 63 & 64 & 65 & 66 & 67 & 68 & 69 & 70\\
+71 & 72 & 73 & 74 & 75 & 76 & 77 & 78 & 79 & 80\\
+81 & 82 & 83 & 84 & 85 & 86 & 87 & 88 & 89 & 90\\
+91 & 92 & 93 & 94 & 95 & 96 & 97 & 98 & 99 & 100\\
+\end{tabular}$\phantom{fasdf}$ \vskip.01in
+\end{proof}
+
+
+\setcounter{thm}{6}
+
+%%%Theorem 2.7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fundamental Theorem of Arithmetic-Existence Part)]
+Every natural number greater than $1$ is either a prime number or it
+can be expressed as a finite product of prime numbers. That is, for
+every natural number $n$ greater than $1$, there exist distinct
+primes $p_1, p_2, \hdots, p_m$ and natural numbers $r_1, r_2,
+\hdots, r_m$ such that \[n = p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m}.\]
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Lemma 2.8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{lem}
+Let $p$ and $q_1, q_2, \hdots, q_n$ all be primes and let $k$ be a
+natural number such that~$p k = q_1q_2 \cdots q_n$.  Then $p = q_i$
+for some $i$.
+\end{lem}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 2.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fundamental Theorem of Arithmetic-Uniqueness part]
+Let $n$ be a natural number.  Let $\{p_1, p_2, \hdots, p_m\}$ and
+$\{q_1, q_2, \hdots, q_s\}$ be sets of primes with $p_i \neq p_j$ if
+$i \neq j$ and $q_i \neq q_j$ if $i \neq j$. Let $\{r_1, r_2,
+\hdots, r_m\}$ and $\{t_1, t_2, \hdots, t_s\}$ be sets of natural
+numbers such that
+\begin{align*}
+n & = p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m} \\
+  & = q_1^{t_1}q_2^{t_2}\cdots q_s^{t_s}.
+\end{align*}
+Then $m = s$ and $\{p_1, p_2, \hdots, p_m\} = \{q_1, q_2, \hdots,
+q_s\}$. That is, the sets of primes are equal but their elements are
+not necessarily listed in the same order; that is, $p_i$ may or may
+not equal $q_i$.  Moreover, if~$p_i = q_j$ then $r_i = t_j$.  In
+other words, if we express the same natural number as a product of
+powers of distinct primes, then the expressions are identical except
+for the ordering of the factors.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+\end{document}
