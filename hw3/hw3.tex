@@ -1,0 +1,172 @@
+
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 3: 1.21-1.23, 1.25-1.28\\
+M328K \\
+January 26th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{1}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{20}
+%%%%%%%%%%%%1.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let a natural number $n$ be expressed in base $10$ as \[n = a_k
+a_{k-1} \hdots a_1 a_0.\]  (Note that what we mean by this notation
+is that each $a_i$ is a digit of a regular base $10$ number, not
+that the $a_i$'s are being multiplied together.) If $m = a_k +
+a_{k-1} + \hdots + a_1 + a_0$, then $n \equiv m \pmod{3}$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your Proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+If a natural number is divisible by $3$, then, when expressed in
+base $10$, the sum of its digits is divisible by $3$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+If the sum of the digits of a natural number expressed in base $10$
+is divisible by $3$, then the number is divible by $3$ as well.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+\setcounter{thm}{24}
+
+%%%%%%%%%%%%1.25%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer} Illustrate the Division Algorithm for: \end{exer}
+\begin{enumerate}
+    \item[(1)] $m = 25$, $n = 7$.
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(2)] $m = 277$, $n = 4$.
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(3)] $m = 33$, $n = 11$.
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+    \item[(4)] $m = 33$, $n = 45$.
+    \begin{proof}[Solution]
+    Type your solution here!
+    \end{proof}
+
+\end{enumerate}
+
+%%%%%%%%%%%%1.26%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Prove the existence part of the Division Algorithm. (\textit{Hint}:
+Given $n$ and $m$, how will you define $q$?  Once you choose this
+$q$, then how is $r$ chosen?  Then show that $0 \leq r \leq n-1$.)
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.27%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Prove the uniqueness part of the Division Algorithm.
+
+(\textit{Hint}: If $nq + r = nq' + r'$, then $nq -nq' = r' - r$. Use
+what you know about $r$ and $r'$ as part of your argument that $q =
+q'$.)
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%%%%%%%%%%1.28%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$.  Then $a \equiv b
+\pmod{n}$ if and only if $a$ and $b$ have the same remainder when
+divided by $n$.  Equivalently, $a \equiv b \pmod{n}$ if and only if
+when $a = nq_1 + r_1$ ($0 \leq r_1 \leq n-1$) and $b = nq_2 + r_2$
+($0 \leq r_2 \leq n-1$), then~$r_1 = r_2$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+\end{document}
