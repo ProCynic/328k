@@ -41,6 +41,9 @@
 \newcommand{\ord}{\operatorname{ord}}
 \def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
 
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
+
 
 \makeindex
 
@@ -51,8 +54,8 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
-HW 6: 1.48, 1.50, 1.51, 1.53, 1.54\\
+\large{\textbf{Geoffrey Parker - grp352 \\
+HW 6: 1.38-1.40, 1.48, 1.50, 1.51, 1.53, 1.54\\
 M328K \\
 February 7th, 2012 \\}}
 \end{flushright}
@@ -70,6 +73,77 @@ February 7th, 2012 \\}}
 
 %%%%%%%%%Now, set the theorem number to one less than the first theorem in
 %%%%%%%%%the assignment.
+
+\setcounter{thm}{37}
+%%%%%%%%%%%%1.38%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$ and $b$ be integers. If $(a, b) = 1$, then there exist
+integers $x$ and $y$ such that $ax + by = 1$.
+\end{thm}
+
+\begin{proof}[Proof]
+Let $a$ and $b$ be integers with $(a, b) = 1$.  We will show that there exist integers $x$ and $y$ such that $ax + by = 1$.  First, let $S$ be the set of natural numbers of the form $ax + by$ for any integers $x$ and $y$.  Now we will show that $S$ is not empty.  Because $(a, b) = 1$, $a$ and $b$ cannot both be $0$, so assume that $\card{a} > 0$.  If $a$ is positive, then $a1 + b0$ will be in $S$, and if $a$ is negative, then $a(-1) + b0$ will be an element of $S$.\\
+
+Since $S$ is a non-empty subset of the natural numbers, then by the Well Ordering Axiom $S$ has a least element, which we will call $k$.  Since $k$ is an element of $S$, it can be expressed as $k = ax_0 + bx_0$ for some integers $x_0$ and $y_0$.  Then by the Division Algorithm there exist integers $q$ and $r$ such that $a = qk + r$ and $0 \leq r < k$.  By substitution, this gives us $a = q(ax_0 + by_0) + r$, so $r = a - q(ax_0 + by_0) = a(1-qx_0) + b(y_0)$.  Now if we let $x_1 = 1-qx_0$ and $y_1 = y_0$, then we see that $r = ax_1 + by_1$.  Assume by way of contradiction that $r > 0$.  In this case, $r$ is a natural number, and thus an element of the set $S$.  However $r < k$, which is the least element of the set $S$, so we have a contradiction.  Because $0 \leq r$ and not $r > 0$, $r$ must be $0$.  Therefore $a = qk$, and so $k \mid a$.  By similar logic, we can also establish that $k \mid b$.  Now we have that $k \mid a$ and $k \mid b$, so $k$ is a common divisor of $a$ and $b$.  However, because $(a, b) = 1$, it must be that $k \leq 1$.  And because $k$ is an element of $S$, which is a subset of the natural numbers, $k \geq 1$.  Therefore $k = ax_0 + by_0 = 1$.
+\end{proof}
+
+\pagebreak
+%%%%%%%%%%%%1.39%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$ and $b$ be integers. If there exist integers $x$ and $y$
+with $ax + by = 1$, then $(a, b) = 1$.
+\end{thm}
+
+\begin{proof}[Proof]
+Let $a$, $b$, $x$, and $y$ with $ax + by = 1$.  We will show that $(a, b) = 1$.  First, let $d = (a, b)$.  Since $d \mid a$ and $d \mid b$, then by theorem 1.6 $d \mid ax$ and $d \mid ay$.  So by theorem 1.1, $d \mid ax + by$, meaning $d \mid 1$.  Because $d = (a, b)$, $d$ cannot be $0$.  Therefore $d = (a, b) = 1$.
+\end{proof}
+
+%%%%%%%%%%%%1.40%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+For any integers $a$ and $b$ not both $0$, there are integers $x$
+and $y$ such that \[ax + by = (a, b).\]
+\end{thm}
+
+\begin{proof}[Proof]
+Let $a$ and $b$ be integers not both $0$.  First, we will redifine the Euclidean Algorithm as a collection of sequences, with a couple of extensions.  Call it the Extended Euclidean Algorithm.  Let $i$, $j$, $q$, $r$, $x$, and $y$ be sequences of integers, defined as follows: $i_k = j_{k-1}$, $j_k = r_{k-1}$, use the division algorithm to find $q_k$ and $r_k$ such that $i_k = j_kq_k + r_k$, $x_k = x_{k-2} - q_kx_{k-1}$, and $y_k = y_{k-2} - q_ky_{k-1}$.  Now take these initial values: $i_2 = a$, $j_2 = b$, $x_0 = 1$, $y_0 = 0$, $x_1 = 0$, and $y_1 = 1$.  In effect, by filling out these sequences until you find a $k$ such that $r_k = 0$, you are performing the Euclidean Algorithm.  In addition, we will use induction to prove that for any $k \geq 2$, $r_k = ax_k + by_k$.\\
+
+As a base case, take $k = 2$ and $k = 3$.  This gives us:
+\begin{align*}
+i_2 &= j_2q_2 + r_2\\
+r_2 &= i_2 - q_2j_2\\
+r_2 &= a - q_2b\\
+r_2 &= (ax_0 + by_0) - q_2(ax_1 + by_1)\\
+r_2 &= a(x_0 - q_2x_1) + b(y_0 + q_2y_1)\\
+r_2 &= ax_2 + by_2\\
+\\
+i_3 &= j_2\\
+j_3 &= r_2\\
+i_3 &= j_3q_3 + r_3\\
+r_3 &= i_3 - q_3j_3\\
+r_3 &= b - q_3r_2\\
+r_3 &= (ax_1 + by_1) - q_3(ax_2 + by_2)\\
+r_3 &= a(x_1 - q_3x_2) + b(y_1 - q_3y_2)\\
+r_3 &= ax_3 + by_3\\
+\end{align*}
+
+Our induction hypothesis is that there exists some integer $N \geq 3$ such that $r_N = ax_N + by_N$.  We must now show that $r_{N+1} = ax_{N+1} + by_{N+1}$.
+\begin{align*}
+r_N &= ax_N + by_N\\
+i_{N+1} &= j_N\\
+j_{N+1} &= r_N\\
+i_{N+1} &= q_{N+1}j_{N+1} + r_{N+1}\\
+r_{N+1} &= i_{N+1} - q_{N+1}j_{N+1}\\
+r_{N+1} &= r_{N-1} - q_{N+1}r_N\\
+r_{N+1} &= (ax_{N-1} + by_{N-1}) - q_{N+1}(ax_N + by_N)\\
+r_{N+1} &= a(x_{N-1} - q_{N+1}x_N) + b(y_{N-1} - q_{N+1}y_N)\\
+r_{N+1} &= ax_{N+1} + by_{N+1}
+\end{align*}
+
+Now suppose we let $M$ be an integer such that $r_M = 0$.  Since this is the Euclidean Algorithm such an $M$ must exist, and this means that $(a, b) = j_M = r_{M-1} = ax_{M-1} + by_{M-1}$.
+\end{proof}
+
+
+
 \setcounter{thm}{47}
 
 %%%%%%%%%%%%1.48%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,7 +154,9 @@ if and only if $(a, b)|c$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, and $c$ be integers with $a$ and $b$ not both 0.\\ \\
+First assume $(a, b)|c$.  Then, by theorem 1.40, there exist integers $x_0$ and $y_0$ that satisfy $ax_0 + by_0 = (a, b)$.  And by the definition of divides, $c = (a, b)k$ for some integer $k$.  So $c = k(ax_0 + by_0) = ax_0k + by_0k$.  Let the integers $x$ and $y$ be $x_0k$ and $y_0k$.  Therefore $ax + by = c$.\\ \\
+Now assume by way of contradiction that $ax + by = c$ and $(a, b) \nmid c$.  Let $d = (a, b)$.  Then by the definition of divides, there exist integers $j$ and $k$ such that $c = jdx + kdy = d(jx + ky)$.  Since $(jx + ky)$ is an integer, $d \mid c$, which contradicts our assumption.  Therefore if $ax + by = c$, then $(a, b) \mid c$.
 \end{proof}
 
 \setcounter{thm}{49}
@@ -94,9 +170,13 @@ farmer bought?
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+Let $x$ be the number of horses and $y$ be the number of oxen.  So $1770 = 31x + 21y$.\\
+$x = 9$, $y = 71$\\
+$x = 30$, $y = 40$\\
+$x = 51$, $y = 9$
 \end{proof}
 
+\pagebreak
 %%%%%%%%%%%%1.51%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $a$, $b$, $c$, $x_0$, and $y_0$ be integers with $a$ and $b$ not
@@ -108,7 +188,17 @@ equation $ax + by = c$.
 
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, $c$, $x_0$, and $y_0$ be integers with $a$ and $b$ not both $0$ such that $ax_0 + by_0 = c$. Also let $x = x_0 + {b \over (a, b)}$ and $y = y_0 - { a \over (a, b)}$.  So all the following equations are equivalent:
+\begin{align*}
+ax_0 &+ by_0\\
+ax_0 + by_0 &+ {ab \over (a, b)} - {ab \over (a, b)} \\
+ax_0 + {ab \over (a, b)} &+ by_0 - {ab \over (a, b)} \\ 
+a(x_0 + {b \over (a, b)}) &+ b(y_0 - { a \over (a, b)})\\
+ax &+ by
+\end{align*}
+
+Therefore $ax + by = c$.
+
 \end{proof}
 
 \setcounter{thm}{52}
@@ -125,7 +215,29 @@ linear Diophantine equation $ax + by = c$ is of this form.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, and $c$ be integers with $a$ and $b$ not both $0$.  Let $S$ be the set of all pairs of integers $\pair{x}{y}$ such that $x$ and $y$ satisfy the equation $ax + by = c$.  Let $\pair{x_0}{y_0}$ be an element of $S$.  Let $x_k = x_0 + {kb \over (a, b)}$ and $y_k = y_0 - {ka \over (a, b)}$.  We will show both that for all $k$, $\pair{x_k}{y_k}$ is an element of $S$ and that all elements of $S$ may be expressed in the form $\pair{x_k}{y_k}$.\pagebreak \\
+First, for any $\pair{x_k}{y_k}$, the following equations are equivilant.
+
+\begin{align*}
+ax_k &+ by_k\\
+a(x_0 + {kb \over (a, b)}) &+ b(y_0 - {ka \over (a, b)})\\
+ax_0 + {akb \over (a, b)} &+ by_0 - {bka \over (a, b)} \\
+ax_0 + by_0 &+ {abk \over (a, b)} - {abk \over (a, b)}\\
+ax_0 &+ by_0
+\end{align*}
+Since $ax_0 + by_0 = c$, $ax_k + by_k = c$, so $\pair{x_k}{y_k}$ is an element of S.\\
+\\
+
+Now consider any pair of integers $\pair{x'}{y'}$ which is an element of $S$.  Once again, the following equations are all equivalent.
+\begin{align*}
+ax' &+ by'\\
+ax' + by' &+ {abk \over (a, b)} - {abk \over (a, b)} &\textsl{for some integer}\ k\\
+ax' + {akb \over (a, b)} &+ by' - {bka \over (a, b)}\\
+a(x' + {kb \over (a, b)}) &+ b(y' - {ka \over (a, b)})\\
+ax_k &+ by_k
+\end{align*}
+
+Therefore any pair of integers $\pair{x'}{y'}$ in $S$ can be expressed as $\pair{x_k}{y_k}$.
 \end{proof}
 
 %%%%%%%%%%%%1.54%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,7 +246,7 @@ Find all integer solutions to the equation $24x+9y=33$.
 \end{exer}
 
 \begin{proof}[Proof]
-Type your proof here!
+Using the Extended Euclidean Algorithm from theorem 1.40, we find that $3 = 24(-1) + 9(3)$, where $(24, 9) = 3$.  From here we see that $33 = (3)11 = 3(24(-1) + 9(3)) = 24(-3) + 9(9)$.  Therefore by theorem 1.53, we see that all integer solutions to the equation $24x+9y=33$ will be of the form $x_k = -3 + {k9 \over 3} = -3 + 3k$ and $y_k = 9 - {k24 \over 3} = 9 - 8k$.
 \end{proof}
 
 \end{document}
