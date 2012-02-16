@@ -51,7 +51,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker - grp352 \\
 HW 2: 1.15 - 1.20, A.10, A.18\\
 M328K \\
 January 24th, 2012 \\}}
@@ -80,7 +80,7 @@ then $a^2 \equiv b^2 \pmod{n}$.
 \end{exer}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, and $n$ be integers with $n > 0$ and $a \equiv b \pmod{n}$. We will show that $a^2 \equiv b^2 \pmod{n}$.  First, since $a \equiv b \pmod{n}$, by definition of congruence mod n, $n \mid (a - b)$.  Then, by Theorem 1.8, we can show that $n \mid (a - b)(a + b)$, since $(a + b)$ is an integer.  So $n \mid (a^2 - b^2)$.  Therefore, by the definition of congruence mod n, $a^2 \equiv b^2 \pmod{n}$.
 \end{proof}
 
 %%%%%%%%%%%%1.16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,8 +91,7 @@ then $a^3 \equiv b^3 \pmod{n}$.
 \end{exer}
 
 \begin{proof}[Proof]
-Type your proof here!
-\end{proof}
+Let $a$, $b$, and $n$ be integers with $n > 0$ and $a \equiv b \pmod{n}$. We will show that $a^3 \equiv b^3 \pmod{n}$.  First, since $a \equiv b \pmod{n}$, by definition of congruence mod n, $n \mid (a - b)$.  Then, by Theorem 1.8, we can show that $n \mid (a - b)(a^2 + ab + b^2)$, since $(a^2 + ab + b^2)$ is an integer.  So $n \mid (a^3 - b^3)$.  Therefore, by the definition of congruence mod n, $a^3 \equiv b^3 \pmod{n}$.\end{proof}
 
 %%%%%%%%%%%%1.17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exer}
@@ -101,11 +100,11 @@ Let $a$, $b$, $k$, and $n$ be integers with $n
 $a^{k-1} \equiv b^{k-1} \pmod{n}$,
 then \[a^k \equiv b^k \pmod{n}.\]
 \end{exer}
-
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, $k$, and $n$ be integers with $n > 0$ and $k > 1$.  Also, $a \equiv b \pmod{n}$ and $a^{k-1} \equiv b^{k-1} \pmod{n}$.  We will show that $a^k \equiv b^k \pmod{n}$.  Since $a^{k-1} \equiv b^{k-1} \pmod{n}$, $n \mid (a^{k-1} - b^{k-1})$, by the definition of congruence mod p. Then, by theorem 1.8, $n \mid (a^{k-1} - b^{k-1}) \times {(a b (a^k-b^k)) \over (b a^k-a b^k)}$. So $n | (a^k - b^k)$ which, by the definition of congruence mod n, means that $a^k \equiv b^k \pmod{n}$.
 \end{proof}
 
+\pagebreak
 %%%%%%%%%%%%1.18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $a$, $b$, $k$, and $n$ be integers with $n
@@ -114,7 +113,7 @@ then \[a^k \equiv b^k \pmod{n}.\]
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, $k$, and $n$ be integers with $n > 0$ and $k > 0$ and $a \equiv b \pmod{n}$. We will show that $a^k \equiv b^k \pmod{n}$.  First, by theorem 1.15, we know that $a^2 \equiv b^2 \pmod{n}$.  Since theorem 1.17 demonstrates that for any integer $j \geq 1$, $a^{j} \equiv b^{j} \pmod{n}$ implies that $a^{j+1} \equiv b^{j+1} \pmod{n}$.  So we have proved by induction that $a^k \equiv b^k \pmod{n}$.
 \end{proof}
 
 %%%%%%%%%%%%1.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,13 +125,13 @@ an example using actual numbers.
 
 \begin{enumerate}
 
-\item Example for 1.12:
-\item Example for 1.13:
-\item Example for 1.14:
-\item Example for 1.15:
-\item Example for 1.16:
-\item Example for 1.17:
-\item Example for 1.18:
+\item Example for 1.12: $9 \equiv 5 \pmod{4}$ and $7 \equiv 3 \pmod{4}$.  So, $(9 + 7) - (5 + 3) = 16 - 8 = 8$ and $4 \mid 8$.
+\item Example for 1.13: $12 \equiv 3 \pmod{3}$ and $17 \equiv 8 \pmod{3}$.  So, $(12 - 17) - (3 - 8) = (-5) - (-5) = 0$ and $3 \mid 0$.
+\item Example for 1.14: $6 \equiv 4 \pmod{2}$ and $7 \equiv 3 \pmod{2}$.  So, $6 \times 7 - 4 \times 3 = 42 - 12 = 30$ and $2 \mid 30$.
+\item Example for 1.15: $17 \equiv 12 \pmod{5}$.  So $17^2 - 12^2 = 289 - 144 = 145$ and $5 \mid 145$.
+\item Example for 1.16: $13 \equiv 4 \pmod{3}$.  So $13^2 - 4^2 = 169 - 16 = 153$ and $3 \mid 153$.
+\item Example for 1.17: $19 \equiv 7 \pmod{6}$ and  $19^4 \equiv 7^4 \pmod{6}$ (that is $130321 \equiv 2401 \pmod{6}$.  $130321 - 2401 = 127920 = 21320 \times 6$.)  $19^5 - 7^5 = 2476099 - 16807 = 2459292 = 409882 * 6$
+\item Example for 1.18: $7 \equiv 2 \pmod{5}$.  So $7^6 - 2^6 = 117649 - 64 = 117585 = 23517$
 
 \end{enumerate}
 
@@ -145,7 +144,7 @@ counterexample.
 \end{ques}
 
 \begin{proof}[Solution]
-Type your solution here!
+No.  $10 \equiv 15 \pmod{5}$, so $2 \times 5 \equiv 3 \times 5 \pmod{5}$, yet $2 \not \equiv 3 \pmod{5}$.
 \end{proof}
 
 %%% Notice that the theorems below don't get included in the numbering system
@@ -153,12 +152,24 @@ Type your solution here!
 %%% of the file.
 
 
+\pagebreak
 %%%%%%%%%%%%A.10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent \textbf{A.10 Theorem.} \emph{Let n be a natural number. Then $1+2+3+\cdots + n=\frac{(n)(n+1)}{2}$}
 
 \begin{proof}[Proof]
-Type your proof here!
+Proof by induction.
+\begin{itemize}
+\item
+Base Case $(n = 1): {1(1+1) \over 2} = 1$.  True.
+\item
+Induction Hypothesis:  There exists some natural number N such that $1+2+3+\cdots + N=\frac{(N)(N+1)}{2}$
+\item
+Then, ${(N+1)(N+2) \over 2}  = {(N)(N+1) + 2(N+1) \over 2} = {(N)(N+1) \over 2} + (N+1)$ \\
+So by the induction hypothesis, this equals $1+2+3+\cdots + N + (N + 1)$\\
+Therefore ${(N)(N+1) + 2(N+1) \over 2} = 1+2+3+\cdots + (N+1)$.
+
+\end{itemize}
 \end{proof}
 
 
@@ -166,7 +177,15 @@ Type your proof here!
 \noindent \textbf{A.18 Theorem.} \emph{For every natural number n,  $1+2+2^2+\cdots + 2^n=2^{n+1}-1$}
 
 \begin{proof}[Proof]
-Type your proof here!
+Proof by induction:
+\begin{itemize}
+\item
+Base Case $(n = 1): 1 + 2^1 = 3$ and $2^{1+1}-1 = 4-1 = 3$.  True.
+\item
+Induction Hypothesis: There exists some natural number N such that $1+2+2^2+\cdots + 2^N=2^{N+1}-1$.
+\item
+So, $2^{(N+1)+1}-1 = 2(2^{N+1}) - 1 = 2(2^{N+1} - 1) + 1$. By the induction hypothesis, this equals $(1+2+2^2+\cdots + 2^N)2 + 1 = (2+2^2+2^3+\cdots + 2^{N+1}) + 1$.  Therefore, $2^{(N+1)+1}-1 = 1+2+2^2+\cdots + 2^{N+1}$.
+\end{itemize}
 \end{proof}
 
 
