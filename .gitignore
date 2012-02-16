@@ -1,0 +1,6 @@
+*~
+*.aux
+*.log
+*.idx
+*.synctex.gz
+templates/*.pdf
