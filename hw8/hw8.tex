@@ -1,0 +1,212 @@
+
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 8: 2.7-2.9, 2.10-2.14, 2.19-2.21\\
+M328K \\
+February 14th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{2}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{6}
+
+%%%Theorem 2.7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fundamental Theorem of Arithmetic-Existence Part)]
+Every natural number greater than $1$ is either a prime number or it
+can be expressed as a finite product of prime numbers. That is, for
+every natural number $n$ greater than $1$, there exist distinct
+primes $p_1, p_2, \hdots, p_m$ and natural numbers $r_1, r_2,
+\hdots, r_m$ such that \[n = p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m}.\]
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Lemma 2.8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{lem}
+Let $p$ and $q_1, q_2, \hdots, q_n$ all be primes and let $k$ be a
+natural number such that~$p k = q_1q_2 \cdots q_n$.  Then $p = q_i$
+for some $i$.
+\end{lem}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 2.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fundamental Theorem of Arithmetic-Uniqueness part]
+Let $n$ be a natural number.  Let $\{p_1, p_2, \hdots, p_m\}$ and
+$\{q_1, q_2, \hdots, q_s\}$ be sets of primes with $p_i \neq p_j$ if
+$i \neq j$ and $q_i \neq q_j$ if $i \neq j$. Let $\{r_1, r_2,
+\hdots, r_m\}$ and $\{t_1, t_2, \hdots, t_s\}$ be sets of natural
+numbers such that
+\begin{align*}
+n & = p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m} \\
+  & = q_1^{t_1}q_2^{t_2}\cdots q_s^{t_s}.
+\end{align*}
+Then $m = s$ and $\{p_1, p_2, \hdots, p_m\} = \{q_1, q_2, \hdots,
+q_s\}$. That is, the sets of primes are equal but their elements are
+not necessarily listed in the same order; that is, $p_i$ may or may
+not equal $q_i$.  Moreover, if~$p_i = q_j$ then $r_i = t_j$.  In
+other words, if we express the same natural number as a product of
+powers of distinct primes, then the expressions are identical except
+for the ordering of the factors.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+\setcounter{thm}{9}
+
+%%%Exercise 2.10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Express $n = 12!$ as a product of primes.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Exercise 2.11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Determine the number of zeroes at the end of $25!$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Theorem 2.12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $b$ be natural numbers greater than 1 and let $p_1^{r_1}p_2^{r_2}\cdots p_m^{r_m}$ be the unique prime factorization of $a$ and let $q_1^{t_1}q_2^{t_2}\cdots q_s^{t_s}$ be the unique prime factorization of $b$.  Then $a \mid b$ if and only if for all $i \leq m$ there exists a $j\leq s$ such that $p_i = q_j$ and $r_i \leq t_j$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Theorem 2.13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+If $a$ and $b$ are natural numbers and $a^2 \mid b^2$ then $a \mid b$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Exercise 2.14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Find $3^14 \cdot 7^22 \cdot 11^5 \cdot 17^3 \cdot 5^2 \cdot 11^4 \cdot 13^8 \cdot 17$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+\setcounter{thm}{18}
+
+%%%Theorem 2.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+There do not exist natural numbers $m$ and $n$ such that $7m^2 = n^2$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Theorem 2.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+There do not exist natural numbers $m$ and $n$ such that $24m^3 = n^3$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Exercise 2.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Show that $\sqrt{7}$ is irrational.  That is, there do not exist natural numbers $n$ and $m$ such that $\sqrt{7} = {n \over m}$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+\end{document}
