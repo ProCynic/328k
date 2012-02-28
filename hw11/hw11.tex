@@ -40,6 +40,8 @@
 \newcommand{\ord}{\operatorname{ord}}
 \def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
 
+\newcommand{\modulo}[3]{$#1 \equiv #2$ (mod $#3$)}
+
 
 \makeindex
 
@@ -80,7 +82,7 @@ also congruent to $1$ modulo $4$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $r_1, r_2, \hdots, r_m$ be natural numbers with each one being congruent to $1$ modulo~$4$. We will show that the product $r_1r_2 \cdots r_m$ is also congruent to $1$ modulo $4$.  Define a sequence of $s$'s, with $s_0 = 1$ and every subsequent $s_i = s_{i-1}r_i$. By this definition, $s_m = r_1r_2 \cdots r_m$.  We will show by induction that $s_m \equiv 1$ (mod 4).  As a base case, $s_1 = 1\cdot r_1$, and $r_1 \equiv 1$ (mod 4) by definition.  Our induction hypothesis is that there exists some natural number $N$ such that $s_N \equiv 1$ (mod 4).  Then $s_{N+1} = s_Nr_{N+1}$.  Since $s_N \equiv 1$ (mod 4) and $r_{N+1} \equiv 1$ (mod 4), then by theorem 1.14 $s_Nr_{N+1} \equiv 1\cdot 1$ (mod 4).  Therefore $s_{N+1} \equiv 1$ (mod 4).  We have now shown by induction that $r_1r_2 \cdots r_m$ is congruent to $1$ modulo $4$.
 \end{proof}
 
 
@@ -92,12 +94,13 @@ modulo~$4$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $P$ be the set of primes numbers that are congruent to $3$ modulo $4$.  We will show that $P$ is infinite.  Since $3$ is prime and \modulo{3}{3}{4}, $P$ is not empty.  Assume by way of contradiction that $P$ is finite, with some cardinality $n$.  Let the natural number $Q$ be the product of all the primes in $P$.  By repeatidly applying theorem 1.14, we see that \modulo{Q}{3^n}{4}.  Now, we have two cases, $n$ is even and $n$ is odd.\\  If $n$ is odd, then \modulo{3^n}{3}{4}, so by theorem 1.11 \modulo{Q}{3}{4}.  Let $q$ be a prime divisor of  $Q + 4$. (TODO: \modulo{q}{3}{4}) Then we have $q \mid Q$ and $q \mid Q+4$.  Therefore $q \mid 4$, which is a contradiction because $q$ is prime and \modulo{q}{3}{4}.\\
+If $n$ is even, then \modulo{3^n}{1}{4} so by theorem 1.11 \modulo{Q}{1}{4}.  Let $q$ be a prime divisor of  $Q + 2$. (TODO: \modulo{q}{3}{4}) Then we have $q \mid Q$ and $q \mid Q+2$.  Therefore $q \mid 2$, which is a contradiction because $q$ is prime and \modulo{q}{3}{4}.
 \end{proof}
 
 
 \setcounter{thm}{40}
-
+\pagebreak
 %%%Exercise 2.41%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exer}
@@ -105,7 +108,14 @@ Use  polynomial long division to compute $(x^m-1) \div (x-1)$.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+\begin{align*}
+x^m - 1 &= x^{m-1}(x-1) + x^{m-1} - 1\\
+x^{m-1} - 1 &= x^{m-2}(x-1) + x^{m-2} - 1\\
+&\cdots \\
+x^2 - 1 &= x(x-1) + x - 1\\
+x - 1 &= 1(x-1)
+\end{align*}
+Therefore:
+\[(x^m-1) \div (x-1) = x^{m-1} + x^{m-2} + \cdots + x + 1\]
 \end{proof}
-
 \end{document}
