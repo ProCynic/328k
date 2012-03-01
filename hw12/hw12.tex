@@ -50,7 +50,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker - grp352 \\
 HW 12: 2.42-2.44\\
 M328K \\
 March 1st, 2012 \\}}
@@ -79,7 +79,9 @@ prime.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number with $2^n - 1$ being prime.  Assume by way of contradiction that $n$ is not prime.  Then by the definition of not prime there will be two natural numbers $x$ and $y$ such that $n = xy$ and $x > 1$.  So $2^n - 1 = 2^{xy} - 1 = (2^x)^y - 1$.  We can now use polynomial long division, similar to exercise 2.41, to find that: 
+\[(2^x)^y - 1 = (2^x-1)((2^x)^{y-1} + (2^x)^{y-2} + \cdots + (2^x) + 1)\]
+Since $x > 1$, $2^x-1 > 1$.  Now we have shown that $2^n - 1$ is not prime, which is a contradiction.  Therefore $n$ is prime.
 \end{proof}
 
 
@@ -91,7 +93,9 @@ power of $2$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number with $2^n + 1$ being prime.  Assume by way of contradiction that $n$ is not a power of 2.  This means that the prime factorization of $n$ contains some term other than 2.  Let $x$ be the product of all the terms in the prime factorization of $n$ that are not 2.  Let $y$ be $2^k$ for some integer $k$ such that $n = xy$.  Now $2^n + 1 = (2^x)^y + 1$.  Preforming polynomial division gives us:
+\[(2^x)^y + 1 = (2^x+1)((2^x)^{y-1} - (2^x)^{y-2} - \cdots - 2^x - 1\]
+Since $x > 1$, we have found a factorization of $2^n + 1$.  Since $2^n + 1$ is prime, this is a contradiction.  Therefore $n$ is a power of 2.
 \end{proof}
 
 
@@ -102,7 +106,8 @@ Find the first few Mersenne primes and Fermat primes.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+Mersenne: 3, 7, 31, 127, 8191, 131071, 524287.\\
+Fermat: 3, 5, 17, 257, 65537.
 \end{proof}
 
 \end{document}
