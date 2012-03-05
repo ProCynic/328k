@@ -50,7 +50,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker - grp352 \\
 HW 13: 3.1-3.3\\
 M328K \\
 March 6th, 2012 \\}}
@@ -83,7 +83,13 @@ why each step is true.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+$ $\\
+\begin{enumerate}
+\item $2^5 \equiv -9 \pmod{41}$.  Because $2^5 - (-9) = 41$ and $41 \mid 41$.
+\item $(2^5)^4 \equiv (-9)^4 \pmod{41}$.  By step 1 and thm 1.18.
+\item $2^{20} \equiv 81^2 \pmod{41} \equiv (-1)^2\pmod{41}$.  By step 2 and thm 1.11.
+\item $2^{20} - 1 \equiv 0 \pmod{41}$. Because $1 \equiv 1 \pmod{41}$ and thm 1.12.
+\end{enumerate}
 \end{proof}
 
 %%%Question 3.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,7 +99,11 @@ In your head, can you find the natural number $k$, $0 \leq k \leq
 \end{ques}
 
 \begin{proof}[Solution]
-Type your solution here!
+\begin{align*}
+1 &\equiv 37 \pmod{12} \\
+1^k &\equiv 37^k \pmod{12} \\
+1 &\equiv 37^{453} \pmod{12}
+\end{align*}
 \end{proof}
 
 %%%Question 3.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,6 +114,6 @@ find the natural number $k$, $0 \leq k \leq 6$, such that $2^{50}
 \end{ques}
 
 \begin{proof}[Solution]
-Type your solution here!
+Well, $50 \equiv 2 \pmod{3}$, so $2^{50} \equiv 4 \pmod{7}$.
 \end{proof}
 \end{document}
