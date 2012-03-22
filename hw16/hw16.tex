@@ -40,6 +40,8 @@
 \newcommand{\ord}{\operatorname{ord}}
 \def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
 
+\newcommand{\card}[1]{\left| #1 \right|}
+
 
 \makeindex
 
@@ -50,7 +52,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker - grp352 \\
 HW 16: 3.13-3.17\\
 M328K \\
 March 22th, 2012 \\}}
@@ -79,7 +81,10 @@ is a composite number for infinitely many integers~$x$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Suppose $f(x) = a_nx^n + a_{n-1}x^{n-1} + \hdots + a_0$ is a polynomial of degree $n > 0$ with integer coefficients and $a_n > 0$.  We will show that $f(x)$ is a composite number for infinitely many integers $x$.  Let $S$ be the set of integers $x$ such that $f(x)$ is composite and let $T$ be the set of numbers $f(x)$ such that $x$ is an element of $S$.  Assume by way of contradiction that $S$ is finite.  Let $m$ be an element of $S$ such that $f(m)$ is the largest element of $T$.  By theorem 3.12, there exists an integer $k$ such that for all integers $j > k$, $f(j) > f(m)$.  Now consider these two cases: $a_0 = 0$ and $a_0 \neq 0$.\\
+In the case that $a_0 \neq 0$, let $y = (k+1)\card{a_0}$.  Since $a_0 \neq 0$, $y$ must be greater than $k$.  Therefore $f(y) > f(m)$.  Also, $a_0 \mid y$, so $y \equiv 0 \pmod{a_0}$.  By theorem 3.8, this means that $f(y) \equiv f(0) \pmod{a_0}$, or equivalently, $a_0 \mid f(y) - a_0$.  Then by theorem 1.1, $a_0 \mid f(y) - a_0 + a_0$, so $a_0 \mid f(y)$.  This means that $f(y)$ is composite.\\
+In the other case, $a_0 = 0$, let $p$ be a natural number and let $y = kp$.  This implies that $y > m$ and that $y \equiv 0 \pmod{p}$.  By theorem 3.8, $f(y) \equiv f(0) \pmod{p}$, and since $a_0 = 0$, $f(y) \equiv 0 \pmod{p}$.  Now we have that $p \mid f(y)$, so $y$ is composite.\\
+In either case, we have found an integer $y > m$ such that $f(y)$ is composite.  By theorem 3.12, $f(y) > f(m)$.  However, because $f(y)$ is composite, it must be an element of $T$ and $f(m)$ is the largest element of $T$.  Therefore we have contradicted our assumption and $S$ must be infinite.
 \end{proof}
 
 %%%Theorem 3.14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
