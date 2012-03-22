@@ -87,12 +87,13 @@ In the other case, $a_0 = 0$, let $p$ be a natural number and let $y = kp$.  Thi
 In either case, we have found an integer $y > m$ such that $f(y)$ is composite.  By theorem 3.12, $f(y) > f(m)$.  However, because $f(y)$ is composite, it must be an element of $T$ and $f(m)$ is the largest element of $T$.  Therefore we have contradicted our assumption and $S$ must be infinite.
 \end{proof}
 
+\pagebreak
 %%%Theorem 3.14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}Given any integer $a$ and any natural number $n$, there exists a unique integer~$t$ in the set $\{0, 1, 2, \hdots, n - 1\}$ such that $a \equiv t \pmod{n}$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$ be an integer and $n$ be a natural number.  Let $S$ be the set $\{0, 1, 2, \hdots, n - 1\}$.  By the division algorithm there exist integers $q$ and $r$ such that $a = nq + r$ with $0 \leq r \leq n-1$.  So $nq = a - r$, which by the definition of dividies means that $n \mid a - r$.  By the definition of congruence mod n, $a \equiv r \pmod{n}$.  Since $0 \leq r \leq n-1$, if we let $t = r$, we have shown that there exists an integer $t$ element of $S$ such that $a \equiv t \pmod{n}$.
 \end{proof}
 
 
@@ -105,10 +106,13 @@ containing no two consecutive numbers.
 \end{exer}
 
 \begin{proof}[Solution]
-Type your solution here!
+canonical complete: $\{0, 1, 2, 3\}$\\
+negative: $\{-1,-2,-3,-4\}$\\
+non-consecutive: $\{0, 2, 5, 7\}$
 \end{proof}
 
 
+\pagebreak
 %%%Theorem 3.16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $n$ be a natural number. Every complete residue system modulo
@@ -116,10 +120,11 @@ $n$ contains $n$ elements.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number.  Let $S$ be any complete residue system modulo $n$.  We will show that $S$ contains $n$ elements.  Consider $T$, the set of integers $\{0, 1, \ldots , n-1\}$.  Note that $T$ is the canonical complete residue system modulo $n$ and $\card{T} = n$.  Since each element of $T$ is congruent to itself modulo $n$ and by definition of complete residue systems modulo $n$ every integer is congruent modulo $n$ to exactly one element of $T$, no element of $T$ is congruent to another distinct element of $T$ modulo $n$.  Let $a$ and $b$ be any two distinct elements of $T$.  We know by definition of complete residue systems modulo $n$ again that $a$ and $b$ are congruent modulo $n$ to exactly one element of $S$ each.  We will call these elements of $S$ $a'$ and $b'$ respectively.  We know that $a' \neq b'$ because if they were equal, then we would have $a \equiv a' \pmod{n}$ and $a' \equiv b \pmod{n}$ implying by theorem 1.11 that $a \equiv b \pmod{n}$, which we know is not true.  Therefore every element of $T$ coorespondes to a distinct element of $S$, meaning that $\card{S} \geq \card{T}$.  Assume by way of contradiction that $\card{s} > n$.  We know, since $T$ is the canonical complete residue system modulo $n$, that every element of $S$ is congruent modulo $n$ to exactly one element of $T$.  Because $\card{S} > \card{T}$, the pigeon hole principle implies that there must be at least two elements of $S$, call them $x$ and $y$ that are congruent modulo $n$ to the same element of $T$, which we will call $z$. So $x \equiv z \pmod{n}$ and $y \equiv z \pmod{n}$, implying by theorem 1.11 that $x \equiv y \pmod{n}$.  However, since all integers are congruent mod $n$ to themselves, we now have that $y$ is congruent mod $n$ to two elements of $S$, contradicting it's definition as a canonical complete residue system modulo $n$.  Therefore $S$ contains exactly $n$ elements.
 \end{proof}
 
 
+\pagebreak
 %%%Theorem 3.17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $n$ be a natural number. Any set of $n$ integers $\{a_1, a_2,
@@ -128,6 +133,6 @@ complete residue system modulo $n$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $n$ be a natural number. Let $S$ be a set of $n$ integers $\{a_1, a_2, \hdots, a_n\}$ for which no two are congruent modulo $n$.  Let $T$ be the canonical complete residue system modulo $n$.  Let $x$ be an arbitrary integer.  By definition of $T$, there must be some $y$ which is an element of $T$ such that $x \equiv y \pmod{n}$.  Let $z$ be an element of $S$ such that $z \equiv y \pmod{n}$.  We know that $z$ exists because $\card{S} = \card{T}$ and every element of $S$ is congruent modulo $n$ to a different element of $T$. If there were two elements of $S$, $j$ and $k$, that were congruent modulo $n$ to the same element of $T$. then by theorem 1.11 we would have $j \equiv k \pmod{n}$, which contradicts the definition of $S$. Now by theorem 1.11 again, $x \equiv z \pmod{n}$.  Let $z'$ some element of $S$ such that $x \equiv z' \pmod{n}$.  By theorem 1.11, this means that $z \equiv z' \pmod{n}$, which contradicts the definition of $S$ unless $z = z'$.  Therefore, since $x$ is arbitrary, every integer is congruent modulo $n$ to exactly one element of $S$, which is the definition of a complete residue system modulo $n$.
 \end{proof}
 \end{document}
