@@ -1,0 +1,142 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 17: 3.180-3.22\\
+M328K \\
+March 27th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{3}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{17}
+
+%%%Exercise 3.18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find all solutions in the appropriate canonical complete residue
+system modulo $n$ that satisfy the following linear congruences:
+\begin{enumerate}
+\item $26x \equiv 14 \pmod{3}$.
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\item $2x \equiv 3 \pmod{5}$.
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\item $4x \equiv 7 \pmod{8}$.
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\item $24x \equiv 123 \pmod{213}$. (This congruence is tedious to do by
+trial and error, so perhaps we should defer work on it for now and
+instead try to develop some techniques that might help.)
+\end{enumerate}
+\end{exer}
+
+%%%Theorem 3.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$.  Show that $ax
+\equiv b \pmod{n}$ has a solution if and only if there exist
+integers $x$ and $y$ such that $ax + ny = b$.
+\end{thm}
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Theorem 3.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$. The equation $ax
+\equiv b \pmod{n}$ has a solution if and only if $(a, n)|b$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+
+%%%Question 3.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+What does the preceding theorem tell us about the congruence $(4)$
+in Exercise $3.18$ above?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Exercise 3.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Use the Euclidean Algorithm\index{Euclidean Algorithm} to find a
+member $x$ of the canonical complete residue system modulo $213$
+that satisfies $24x \equiv 123 \pmod{213}$. Find all members $x$ of
+the canonical complete residue system modulo $213$ that satisfy $24x
+\equiv 123 \pmod{213}$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\end{document}
