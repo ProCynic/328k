@@ -78,11 +78,11 @@ system modulo $n$ that satisfy the following linear congruences:
 \begin{enumerate}
 \item $26x \equiv 14 \pmod{3}$.
 \begin{proof}[Solution]
-All integers $x$ such that $x \equiv 1 \pmod{3}$.
+1
 \end{proof}
 \item $2x \equiv 3 \pmod{5}$.
 \begin{proof}[Solution]
-All integers $x$ such that $x \equiv 4 \pmod{5}$.
+4
 \end{proof}
 \item $4x \equiv 7 \pmod{8}$.
 \begin{proof}[Solution]
@@ -108,7 +108,7 @@ Let $a$, $b$, and $n$ be integers with $n > 0$.  We will show that $ax \equiv b 
 First, assume that $ax \equiv b \pmod{n}$ has a solution $x$.  Then $n \mid ax - b$.  Using the definition of divides, let $-y$ be the integer such that $n(-y) = ax - b$.  So $ax + ny = b$.\\
 Now assume that there exist integers $x$ and $y$ such that $ax + ny = b$.  Then $ax - b = -ny$, so by the definition of divides $n \mid ax - b$.  Therefore by the definition of congruence mod n, $ax \equiv b \pmod{n}$.
 \end{proof}
--
+
 %%%Theorem 3.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $a$, $b$, and $n$ be integers with $n > 0$. The equation $ax
@@ -118,7 +118,7 @@ Let $a$, $b$, and $n$ be integers with $n > 0$. The equation $ax
 \begin{proof}[Proof]
 Let $a$, $b$, and $n$ be integers with $n > 0$. We will show that the equation $ax \equiv b \pmod{n}$ has a solution if and only if $(a, n) \mid b$.\\
 
-First, assume that $ax \equiv b \pmod{n}$ has a solution $x$.  By theorem ??, there exist integers $j$ and $k$ such that $aj + nk = (a, n)$.  So $n(-k) = aj - (a, n)$ and $n \mid aj - (a, n)$ Also, by the definition of congruence modulo n, $n \mid ax - b$.  So by theorem 1.1, $n \mid ax - b + aj - (a, n)$, and by the definition of divides $nm = a(x+j) - b - (a, n)$ for some integer $m$.  Then for some integers $c$ and $d$, 
+First, assume that $ax \equiv b \pmod{n}$ has a solution $x$.  By theorem 1.40, there exist integers $j$ and $k$ such that $aj + nk = (a, n)$.  So $n(-k) = aj - (a, n)$ and $n \mid aj - (a, n)$ Also, by the definition of congruence modulo n, $n \mid ax - b$.  So by theorem 1.1, $n \mid ax - b + aj - (a, n)$, and by the definition of divides $nm = a(x+j) - b - (a, n)$ for some integer $m$.  Then for some integers $c$ and $d$, 
 \[c(a, n)m = d(a, n)(x+j) - b - (a, n).\]
 Rearranging this gives us :
 \[-cm(a, n) + d(x+j)(a, n) - (a, n) = b\]
@@ -126,7 +126,7 @@ or:
 \[(a, n)(d(x+j) - cm - 1) = b.\]
 Since $d(x+j) - cm - 1$ is an integer, $(a, n) \mid b$.\\
 
-Now assume that $(a, n) \mid b$.  By the definition of divides there exists some integer $m$ such that $(a, n)m = b$.  And by theorem ??, there exist integers $j$ and $k$ such that $aj + nk = (a, n)$.  Multiplying both sides by $m$ gives us $m(aj + nk) = b$, or $ajm - b = nm(-k)$.  So by the definition of divides $n \mid ajm - b$, and if we let $x = jm$, then by the definition of congruence modulo n, we have $ax \equiv b \pmod{n}$.
+Now assume that $(a, n) \mid b$.  By the definition of divides there exists some integer $m$ such that $(a, n)m = b$.  And by theorem 1.40, there exist integers $j$ and $k$ such that $aj + nk = (a, n)$.  Multiplying both sides by $m$ gives us $m(aj + nk) = b$, or $ajm - b = nm(-k)$.  So by the definition of divides $n \mid ajm - b$, and if we let $x = jm$, then by the definition of congruence modulo n, we have $ax \equiv b \pmod{n}$.
 \end{proof}
 
 
@@ -141,7 +141,7 @@ in Exercise $3.18$ above?
 Because $(24, 213) = 3$ and $123 = 3 \times 41$, we know by theorem 3.20 that a solution to $24x \equiv 123 \pmod{213}$ exists.
 \end{proof}
 
-
+\pagebreak
 %%%Exercise 3.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exer}
 Use the Euclidean Algorithm\index{Euclidean Algorithm} to find a
@@ -152,6 +152,20 @@ the canonical complete residue system modulo $213$ that satisfy $24x
 \end{exer}
 
 \begin{proof}[Solution]
-We will find all integers $x$ in the canonical complete residue system modulo $213$ such that $24x \equiv 123 \pmod{213}$ using the extended euclidean algorithm.
+We will find all integers $x$ in the canonical complete residue system modulo $213$ such that $24x \equiv 123 \pmod{213}$ using the extended euclidean algorithm.  Here we find the integers $x$ and $y$ such that $ax + ny = b$.
+\begin{align*}
+21 &= 24 \cdot -8 + 213 \cdot 1\\
+3 &= 21 \cdot -1 + 24 \cdot 1\\
+3 &= (24 \cdot -8 + 213 \cdot 1) \cdot -1 + 24 \cdot 1\\
+3 &= 24 \cdot 9 + 213 \cdot -1\\
+\end{align*}
+Also $3\cdot 41 = 123$.
+\begin{align*}
+24(9) + 213(-1) &= 3\\
+41(24(9) + 213(-1)) &= 41(3)\\
+24(369) + 213(-41) &= 123\\
+24(369) - 123 &= 213(41)\\
+\end{align*}
+Therefore $24(369) \equiv 123 \pmod{213}$.  Also, since $369 = 213 \cdot 1 + 156$, we have that $369 \equiv 156 \pmod{213}$.  So our solution is $24(156) \equiv 123 \pmod{213}$, or $x = 156$.
 \end{proof}
 \end{document}
