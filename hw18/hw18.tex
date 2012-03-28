@@ -1,0 +1,125 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 18: 3.23-3.25\\
+M328K \\
+March 29th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{3}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{22}
+
+%%%Question 3.23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+Let $a$, $b$, and $n$ be integers with $n > 0$.  How many solutions
+are there to the linear congruence $ax \equiv b \pmod{n}$ in the
+canonical complete residue system modulo $n$? Can you describe a
+technique to find them?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Theorem 3.24%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$. Then,
+\begin{enumerate}
+\item The congruence $ax \equiv b \pmod{n}$ is solvable in integers if
+and only if $(a,n)|b$.
+\item If $x_0$ is a solution to the congruence $ax \equiv b\pmod{n}$,
+then all solutions are given by \[ x_0 + \left(\frac{n}{(a,n)}\cdot
+m\right)\pmod{n}\] for $m = 0,\ 1,\ 2,\ \hdots\ $, $(a, n)-1$.
+\item If $ax \equiv b \pmod{n}$ has a solution, then there are exactly
+$(a, n)$ solutions in the canonical complete residue system modulo
+$n$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+
+
+%%%Exercise 3.25%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+A band of $17$ pirates stole a sack of gold coins.  When they tried
+to divide the fortune into equal portions, $3$ coins remained.  In
+the ensuing brawl over who should get the extra coins, one pirate
+was killed.  The coins were redistributed, but this time an equal
+division left $10$ coins.  Again they fought about who should get
+the remaining coins and another pirate was killed.  Now,
+fortunately, the coins could be divided evenly among the surviving
+$15$ pirates.  What was the fewest number of coins that could have
+been in the sack?
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\end{document}
