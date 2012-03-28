@@ -4,3 +4,4 @@
 *.idx
 *.synctex.gz
 templates/*.pdf
+.blg
