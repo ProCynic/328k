@@ -1,0 +1,469 @@
+
+\documentclass[11pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein \textwidth=6.0truein \hoffset=-.5truein
+\voffset=-.5truein \numberwithin{equation}{section}
+\pagestyle{headings} \footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{Name \\
+M328K  \\
+Chapter 3\\
+DUE DATE \\}}
+\end{flushright}
+
+
+
+\setcounter{tocdepth}{3}
+
+\section*{Thinking Cyclically}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\setcounter{section}{3}
+
+%Here is where you can change what number you want the theorems to start at.  You put one less than the number of the first theorem.
+\setcounter{thm}{0}
+
+
+
+
+%%%Exercise 3.1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Show that $41$ divides $2^{20}-1$ by following these steps.  Explain
+why each step is true.
+\begin{enumerate} \item $2^5 \equiv -9 \pmod{41}$.  \item $(2^5)^4
+\equiv (-9)^4 \pmod{41}$.  \item $2^{20} \equiv 81^2 \pmod{41}
+\equiv (-1)^2\pmod{41}$.  \item $2^{20} - 1 \equiv 0 \pmod{41}$.
+\end{enumerate}
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Question 3.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+In your head, can you find the natural number $k$, $0 \leq k \leq
+11$, such that $k \equiv 37^{453} \pmod{12}$?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Question 3.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+In your head or using paper and pencil, but no calculator, can you
+find the natural number $k$, $0 \leq k \leq 6$, such that $2^{50}
+\equiv k \pmod{7}$.
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Question 3.4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+Using paper and pencil, but no calculator, can you find the natural
+number $k$, $0 \leq k \leq 11$, such that~$39^{453} \equiv k
+\pmod{12}$.
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Exercise 3.5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Show that $39$ divides $17^{48}-5^{24}$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Question 3.6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}[Describe technique]
+Let $a$, $n$, and $r$ be natural numbers.  Describe how to find the
+number $k$ ($0 \leq k \leq n - 1$) such that $k \equiv a^r \pmod{n}$
+subject to the restraint that you never multiply numbers larger than
+$n$ and that you only have to do about $\log_2{r}$ such
+multiplications.
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+%%%Question 3.7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+Let $f(x) = 13x^{49} - 27x^{27} + x^{14} - 6$.  Is it true that
+\[f(98) \equiv f(-100) \pmod{99}?\]
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+%%%Theorem 3.8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Suppose $f(x) = a_nx^n + a_{n-1}x^{n-1} + \hdots + a_0$ is a
+polynomial of degree $n>0$ with integer coefficients.  Let $a$, $b$,
+and $m$ be integers with $m > 0$.  If $a \equiv b \pmod{m}$,
+then~$f(a) \equiv f(b) \pmod{m}$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Corollary 3.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{cor}
+Let the natural number $n$ be expressed in base $10$ as
+\[n = a_k a_{k-1} \hdots a_1 a_0. \]
+ Let $m = a_k + a_{k-1} + \hdots + a_1 + a_0$. Then $9|n$ if and only if $9|m$.
+\end{cor}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Corollary 3.10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{cor}
+Let the natural number $n$ be expressed in base $10$ as
+\[n = a_k a_{k-1} \hdots a_1 a_0. \]
+If $m = a_k + a_{k-1} + \hdots + a_1 + a_0$. Then $3|n$ if and only
+if $3|m$.
+\end{cor}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 3.11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Suppose $f(x) = a_nx^n + a_{n-1}x^{n-1} + \hdots + a_0$ is a
+polynomial of degree $n > 0$ and suppose $a_n > 0$.  Then there is
+an integer $k$ such that if~$x > k$, then $f(x) > 0$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 3.12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Suppose $f(x) = a_nx^n + a_{n-1}x^{n-1} + \hdots + a_0$  is a
+polynomial of degree $n > 0$ and suppose $a_n > 0$.  Then for any
+number $M$ there is an integer~$k$ (which depends on $M$) such that
+if~$x > k$, then $f(x) > M$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 3.13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Suppose $f(x) = a_nx^n + a_{n-1}x^{n-1} + \hdots + a_0$ is a
+polynomial of degree $n > 0$ with integer coefficients.  Then $f(x)$
+is a composite number for infinitely many integers~$x$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Theorem 3.14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}Given any integer $a$ and any natural number $n$, there exists a unique integer~$t$ in the set $\{0, 1, 2, \hdots, n - 1\}$ such that $a \equiv t \pmod{n}$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+
+%%%Exercise 3.15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find three complete residue systems modulo $4$: the canonical
+complete residue system, one containing negative numbers, and one
+containing no two consecutive numbers.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Theorem 3.16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $n$ be a natural number. Every complete residue system modulo
+$n$ contains $n$ elements.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 3.17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $n$ be a natural number. Any set of $n$ integers $\{a_1, a_2,
+\hdots, a_n\}$ for which no two are congruent modulo $n$ is a
+complete residue system modulo $n$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+
+%%%Exercise 3.18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find all solutions in the appropriate canonical complete residue
+system modulo $n$ that satisfy the following linear congruences:
+\begin{enumerate}
+\item $26x \equiv 14 \pmod{3}$.
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\item $2x \equiv 3 \pmod{5}$.
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\item $4x \equiv 7 \pmod{8}$.
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+\item $24x \equiv 123 \pmod{213}$. (This congruence is tedious to do by
+trial and error, so perhaps we should defer work on it for now and
+instead try to develop some techniques that might help.)
+\end{enumerate}
+\end{exer}
+
+%%%Theorem 3.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$.  Show that $ax
+\equiv b \pmod{n}$ has a solution if and only if there exist
+integers $x$ and $y$ such that $ax + ny = b$.
+\end{thm}
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+%%%Theorem 3.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$. The equation $ax
+\equiv b \pmod{n}$ has a solution if and only if $(a, n)|b$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+
+%%%Question 3.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+What does the preceding theorem tell us about the congruence $(4)$
+in Exercise $3.18$ above?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Exercise 3.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Use the Euclidean Algorithm\index{Euclidean Algorithm} to find a
+member $x$ of the canonical complete residue system modulo $213$
+that satisfies $24x \equiv 123 \pmod{213}$. Find all members $x$ of
+the canonical complete residue system modulo $213$ that satisfy $24x
+\equiv 123 \pmod{213}$.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Question 3.23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+Let $a$, $b$, and $n$ be integers with $n > 0$.  How many solutions
+are there to the linear congruence $ax \equiv b \pmod{n}$ in the
+canonical complete residue system modulo $n$? Can you describe a
+technique to find them?
+\end{ques}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+%%%Theorem 3.24%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$. Then,
+\begin{enumerate}
+\item The congruence $ax \equiv b \pmod{n}$ is solvable in integers if
+and only if $(a,n)|b$.
+\item If $x_0$ is a solution to the congruence $ax \equiv b\pmod{n}$,
+then all solutions are given by \[ x_0 + \left(\frac{n}{(a,n)}\cdot
+m\right)\pmod{n}\] for $m = 0,\ 1,\ 2,\ \hdots\ $, $(a, n)-1$.
+\item If $ax \equiv b \pmod{n}$ has a solution, then there are exactly
+$(a, n)$ solutions in the canonical complete residue system modulo
+$n$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+
+
+%%%Exercise 3.25%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+A band of $17$ pirates stole a sack of gold coins.  When they tried
+to divide the fortune into equal portions, $3$ coins remained.  In
+the ensuing brawl over who should get the extra coins, one pirate
+was killed.  The coins were redistributed, but this time an equal
+division left $10$ coins.  Again they fought about who should get
+the remaining coins and another pirate was killed.  Now,
+fortunately, the coins could be divided evenly among the surviving
+$15$ pirates.  What was the fewest number of coins that could have
+been in the sack?
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+
+%%%Exercise 3.26%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}[Brahmagupta, 7th century A.D.]
+When eggs in a basket are removed two, three, four, five or six at a
+time, there remain, respectively, one, two, three, four, or five
+eggs.  When they are taken out seven at a time, none are left over.
+Find the smallest number of eggs that could have been contained in
+the basket.
+\end{exer}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+
+%%%Theorem 3.27%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, $m$, and $n$ be integers with $m > 0$ and $n > 0$.
+Then the system
+\[ \begin{array}{l}
+x \equiv a \pmod{n} \\
+x \equiv b \pmod{m} \end{array} \] has a solution if and only if
+$(n, m)| a - b$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 3.28%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, $m$, and $n$ be integers with $m > 0$, $n > 0$, and
+$(m,n)=1$.  Then the system
+\[ \begin{array}{l}
+x \equiv a \pmod{n} \\
+x \equiv b \pmod{m} \end{array} \] has a unique solution modulo
+$mn$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%Theorem 3.29%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Chinese Remainder Theorem]
+Suppose $n_1, n_2, \hdots, n_L$ are positive integers that are
+pairwise relatively prime, that is, $(n_i, n_j)=1$ for $i\neq j$,
+$1\leq i, j \leq L$.  Then the system of $L$ congruences
+\[ \begin{array}{c}
+x \equiv a_1 \pmod{n_1} \\
+x \equiv a_2 \pmod{n_2} \\
+\vdots \\
+x \equiv a_L \pmod{n_L} \end{array} \] has a unique solution modulo
+the product $n_1 n_2  n_3 \cdots n_L$.
+\end{thm}
+
+\begin{proof}[Proof]
+Type your proof here!
+\end{proof}
+
+
+%%%BPE 3.30%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{bpe}
+After not looking at the material in this chapter for a day or two,
+take a blank piece of paper and outline the development of that
+material in as much detail as you can without referring to the text
+or to notes. Places where you get stuck or can't remember highlight
+areas that may call for further study.
+\end{bpe}
+
+\begin{proof}[Solution]
+Type your solution here!
+\end{proof}
+
+
+
+\end{document}
