@@ -82,7 +82,29 @@ $(n, m)| a - b$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, $m$, and $n$ be integers with $m > 0$ and $n > 0$.
+
+First assume that the system 
+\[ \begin{array}{l}
+x \equiv a \pmod{n} \\
+x \equiv b \pmod{m} \end{array} \] has a solution $x$.  So by definition of congruence mod n we have $n \mid x - a$ and $m \mid x - b$.  And since $(n, m)$ divides both $n$ and $m$, we have $(n, m) \mid x - a$ and $(n, m) \mid x - b$.  Therefore by theorem 1.2 $(n, m) \mid x - b - (x - a)$, or $(n, m) \mid a - b$.
+
+Now assume that $(n, m) \mid a - b$.  Let $x$ be an integer such that $n \mid x - a$.  So $(n, m) \mid x - a$, $(n, m) \mid x - a + a - b$, $(n, m) \mid x - b$
+$n \mid x - a$\\
+$n \mid $
+
+
+
+%$(n, m)k = a - b$\\
+%$(n, m)k = a - b + x - x$\\
+%$(n, m)k = (x - b) - (x - a)$\\
+
+
+
+%$n \mid x - a$\\
+%$m \mid x - b$\\
+
+
 \end{proof}
 
 
@@ -97,7 +119,18 @@ $mn$.
 \end{thm}
 
 \begin{proof}[Proof]
-Type your proof here!
+Let $a$, $b$, $m$, and $n$ be integers with $m > 0$, $n > 0$, and $(m,n)=1$.  Since $1 \mid a - b$, then by theorem 3.27 there must be a solution to the system
+\[ \begin{array}{l}
+x \equiv a \pmod{n} \\
+x \equiv b \pmod{m} \end{array} \]
+Let $x_0$ be a solution to this system.  Let $x_0'$ be the integer in the canonical complete residue system $mn$ such that $x_0 \equiv x_0' \pmod{mn}$. Let $x_1$ be any other solution to the system.  Let $x_1'$ be the integer in the canonical complete residue system $mn$ such that $x_1 \equiv x_1' \pmod{mn}$.  We will show that $x_0' = x_1'$.
+
+Since $x_0$ and $x_1$ are both solutions to the system of equations, we know that $n \mid x_0 - a$ and $n \mid x_1 - a$, so by theorem 1.2 $n \mid x_0 - x_1$.  Similarly, $m \mid x_0 - x_1$
+
+
+$mn \mid x_0 - x_0'$\\
+$mn \mid x_1 - x_1'$\\
+
 \end{proof}
 
 
