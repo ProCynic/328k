@@ -1,0 +1,409 @@
+
+\documentclass[11pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein \textwidth=6.0truein \hoffset=-.5truein
+\voffset=-.5truein \numberwithin{equation}{section}
+\pagestyle{headings} \footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{Name \\
+M328K  \\
+DUE DATE \\}}
+\end{flushright}
+
+
+
+\setcounter{tocdepth}{3}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\setcounter{section}{3}
+
+%Here is where you can change what number you want the theorems to start at.  You put one less than the number of the first theorem.
+\setcounter{thm}{0}
+
+
+\section{Fermat's Little Theorem and Euler's Theorem}
+
+
+\section*{Abstracting the Ordinary}
+
+
+\subsection*{Orders of an integer modulo $n$}
+
+%%%Exercise 4.1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}For $i = 0$, $1$, $2$, $3$, $4$, $5$, and $6$,
+find the number in the canonical complete residue
+system\index{canonical complete residue system modulo $n$} to which
+$2^i$ is congruent modulo $7$.  In other words, compute
+$2^0\pmod{7}, 2^1\pmod{7}, 2^2\pmod{7}, \dots, 2^6\pmod{7}$.
+\end{exer}
+
+%%%Theorem 4.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$.  Then $(a^j,
+n) = 1$ for any natural number $j$.
+\end{thm}
+
+%%%Theorem 4.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n>0$ and $(a, n) = 1$.  If
+$a\equiv b \pmod{n}$, then $(b, n) = 1$.
+\end{thm}
+
+%%%Theorem 4.4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers.  Then there exist natural
+numbers $i$ and $j$, with $i \neq j$, such that $a^i \equiv a^j
+\pmod{n}$.
+\end{thm}
+
+%%%Theorem 4.5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$, $b$, $c$, and $n$ be integers with $n
+> 0$.  If $ac \equiv bc \pmod{n}$ and $(c, n) = 1$, then $a \equiv b
+\pmod{n}$.
+\end{thm}
+
+%%%Theorem 4.6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$.  Then there
+exists a natural number $k$ such that $a^k \equiv 1 \pmod{n}$.
+\end{thm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Fermat's Little Theorem}
+
+%%%Question 4.7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ques}
+Choose some relatively prime natural numbers $a$ and $n$ and compute
+the order of $a$ modulo $n$. Frame a conjecture concerning how large
+the order of $a$ modulo $n$ can be, depending on $n$.
+\end{ques}
+
+%%%Theorem 4.8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$ and let $k =
+\ord_n(a)$.  Then the numbers $a^1$, $a^2$, $\dots$, $a^k$ are
+pairwise incongruent modulo $n$.
+\end{thm}
+
+%%%Theorem 4.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$ and let $k =
+\ord_n(a)$.  For any natural number $m$, $a^m$ is congruent modulo
+$n$ to one of the numbers~$a^1$, $a^2$, $\hdots$, $a^k$.
+\end{thm}
+
+%%%Theorem 4.10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$, let $k =
+\ord_n(a)$, and let $m$ be a natural number.  Then $a^m \equiv 1
+\pmod{n}$ if and only if $k|m$.
+\end{thm}
+
+%%%Theorem 4.11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$. Then
+$\ord_n(a) < n$.
+\end{thm}
+
+%%%Exercise 4.12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Compute $a^{p-1} \pmod{p}$ for various numbers $a$ and primes $p$,
+and make a conjecture.
+\end{exer}
+
+%%%Theorem 4.13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ be a prime and let $a$ be an integer not divisible by $p$;
+that is, $(a, p) = 1$.  Then $\{a, 2a, 3a, \hdots, pa\}$ is a
+complete residue system modulo $p$.
+\end{thm}
+
+%%%Theorem 4.14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ be a prime and let $a$ be an integer not divisible by $p$.
+Then
+\[a \cdot 2a \cdot 3a \cdot \hdots \cdot (p-1)a \equiv
+    1 \cdot 2 \cdot 3 \cdot \hdots \cdot (p-1) \pmod{p}.\]
+\end{thm}
+
+%%%Theorem 4.15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fermat's Little Theorem, Version I]
+If $p$ is a prime and $a$ is an integer relatively prime to $p$,
+then $a^{(p-1)} \equiv 1 \pmod{p}$.
+\end{thm}
+
+%%%Theorem 4.16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Fermat's Little Theorem, Version II]
+If $p$ is a prime and $a$ is \emph{any} integer, then $a^p \equiv a
+\pmod{p}$.
+\end{thm}
+
+%%%Theorem 4.17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+The two versions of  Fermat's Little Theorem stated above are
+equivalent to one another, that is, each one can be deduced from the
+other.
+\end{thm}
+
+%%%Theorem 4.18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ be a prime and $a$ be an integer. If $(a,p)=1$, then
+$\operatorname{ord}_p(a)$ divides $p-1$, that is,
+$\operatorname{ord}_p(a)| p-1$.
+\end{thm}
+
+%%%Exercise 4.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Compute each of the following without the aid of a calculator or
+computer.
+\begin{enumerate}
+\item $512^{372} \pmod{13}$.
+\item $3444^{3233} \pmod{17}$.
+\item $123^{456} \pmod{23}$.
+\end{enumerate}
+\end{exer}
+
+%%%Exercise 4.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find the remainder upon division of $314^{159}$ by $31$.
+\end{exer}
+
+%%%Theorem 4.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $n$ and $m$ be natural numbers that are relatively prime, and
+let $a$ be an integer.  If $x \equiv a \pmod{n}$ and $x \equiv a
+\pmod{m}$, then $x \equiv a \pmod{nm}$.
+\end{thm}
+
+
+%%%Exercise 4.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find the remainder when $4^{72}$ is divided by $91$ $(=7\cdot 13)$.
+\end{exer}
+
+
+%%%Exercise 4.23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Find the natural number $k < 117$ such that $2^{117} \equiv k
+\pmod{117}$. (Notice that $117$ is not prime.)
+\end{exer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{An alternative route to Fermat's Little Theorem}
+
+%%%Theorem 4.24%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Binomial Theorem]
+Let $a$ and $b$ be numbers and let $n$ be a natural number.  Then
+\[(a+b)^n = \sum_{i=0}^n \binom{n}{i} a^{n-i}b^i.\]
+\end{thm}
+
+%%%Lemma 4.25%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lem}
+If $p$ is prime and $i$ is a natural number less than $p$, then $p$
+divides $\binom{p}{i}$.
+\end{lem}
+
+%%%Theorem 4.26%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fermat's Little Theorem, Version II]
+If $p$ is a prime and $a$ is an integer, then $a^p \equiv a
+\pmod{p}$.
+\end{thm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Euler's Theorem and Wilson's Theorem}
+
+
+%%%Question 4.27%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ques}
+The numbers $1$, $5$, $7$, and $11$ are all the natural numbers less
+than or equal to $12$ that are relatively prime to $12$, so
+$\phi(12) = 4$.
+\begin{enumerate}
+\item What is $\phi(7)$?
+\item What is $\phi(15)$?
+\item What is $\phi(21)$?
+\item What is $\phi(35)$?
+\end{enumerate}
+\end{ques}
+
+%%%Theorem 4.28%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers such that $(a, n) = 1$ and $(b, n)
+= 1$. Then~\mbox{$(ab, n) = 1$}.
+\end{thm}
+
+%%%Theorem 4.29%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, and $n$ be integers with $n > 0$. If $a \equiv b
+\pmod{n}$ and $(a, n) = 1$, then~$(b, n) = 1$.
+\end{thm}
+
+%%%Theorem 4.30%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$, $b$, $c$, and $n$ be integers with $n
+> 0$.  If $ab \equiv ac \pmod{n}$ and $(a, n) = 1$, then $b \equiv c
+\pmod{n}$.
+\end{thm}
+
+%%%Theorem 4.31%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $n$ be a natural number and let $x_1$, $x_2$, $\hdots$,
+$x_{\phi(n)}$ be the distinct natural numbers less than or equal to
+$n$ that are relatively prime to $n$.  Let $a$ be a non-zero integer
+relatively prime to $n$ and let $i$ and $j$ be different natural
+numbers less than or equal to~$\phi(n)$.  Then~$ax_i \not \equiv
+ax_j \pmod{n}$.
+\end{thm}
+
+%%%Theorem 4.32%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Euler's Theorem]
+If $a$ and $n$ are integers with $n > 0$ and $(a, n) = 1$, then \[
+a^{\phi(n)} \equiv 1 \pmod{n}. \]
+\end{thm}
+
+%%%Theorem 4.33%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{cor}[Fermat's Little Theorem]
+If $p$ is a prime and $a$ is an integer relatively prime to $p$,
+then $a^{(p-1)} \equiv 1 \pmod{p}$.
+\end{cor}
+
+
+%%%Exercise 4.34%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Compute each of the following without the aid of a calculator or
+computer.
+\begin{enumerate}
+\item $12^{49} \pmod{15}$.
+\item $139^{112} \pmod{27}$.
+\end{enumerate}
+\end{exer}
+
+%%%Exercise 4.35%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find the last digit in the base $10$ representation of the integer
+$13^{474}$.
+\end{exer}
+
+%%%Theorem 4.36%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ be a prime and let $a$ be an integer such that $1 \leq a <
+p$.  Then there exists a unique natural number $b$ less than $p$
+such that $ab \equiv 1 \pmod{p}$.
+\end{thm}
+
+%%%Exercise 4.37%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Let $p$ be a prime. Show that the natural numbers $1$ and $p-1$ are
+their own inverses modulo $p$.
+\end{exer}
+
+
+%%%Theorem 4.38%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ be a prime and let $a$ and $b$ be integers such that $1 <
+a,b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Then $a \neq b$.
+\end{thm}
+
+%%Exercise 4.39%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+ Find all pairs of numbers $a$ and $b$ in
+$\{2, 3, \dots, 11\}$ such that $ab \equiv 1 \pmod{13}$.
+\end{exer}
+
+
+%%%Theorem 4.40%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+If $p$ is a prime larger than $2$, then $2 \cdot 3 \cdot 4 \cdot
+\hdots \cdot (p-2) \equiv 1 \pmod{p}$.
+\end{thm}
+
+%%%Theorem 4.41%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Wilson's Theorem]
+If $p$ is a prime, then $(p - 1)! \equiv -1 \pmod{p}$.
+\end{thm}
+
+%%%Theorem 4.42%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Converse of Wilson's Theorem]
+If $n$ is a natural number such that $(n - 1)! \equiv -1 \pmod{n}$,
+then $n$ is prime.
+\end{thm}
+
+
+%%%BPE 4.43%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{bpe}
+Chapter 4 is the culmination of all of your inquiries from the first
+three chapters. After not looking at the material for a day or two,
+take a blank piece of paper and outline the development of the first
+four chapters in as much detail as you can without referring to the
+text or to notes. Places where you get stuck or can't remember
+highlight areas that may call for further study.
+\end{bpe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
