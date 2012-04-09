@@ -1,0 +1,120 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 21: 4.7 - 4.11\\
+M328K \\
+April 10th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{4}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{6}
+
+%%%Question 4.7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ques}
+Choose some relatively prime natural numbers $a$ and $n$ and compute
+the order of $a$ modulo $n$. Frame a conjecture concerning how large
+the order of $a$ modulo $n$ can be, depending on $n$.
+\end{ques}
+\begin{proof}[Answer]
+\end{proof}
+
+%%%Theorem 4.8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$ and let $k =
+\ord_n(a)$.  Then the numbers $a^1$, $a^2$, $\dots$, $a^k$ are
+pairwise incongruent modulo $n$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 4.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$ and let $k =
+\ord_n(a)$.  For any natural number $m$, $a^m$ is congruent modulo
+$n$ to one of the numbers~$a^1$, $a^2$, $\hdots$, $a^k$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 4.10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$, let $k =
+\ord_n(a)$, and let $m$ be a natural number.  Then $a^m \equiv 1
+\pmod{n}$ if and only if $k|m$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 4.11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$. Then
+$\ord_n(a) < n$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+\end{document}
