@@ -1,3 +1,4 @@
+
 \documentclass[12pt,leqno]{article}
 
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
@@ -107,7 +108,7 @@ $n$ to one of the numbers~$a^1$, $a^2$, $\hdots$, $a^k$.
 \end{thm}
 \begin{proof}[Proof]
 Let $a$ and $n$ be natural numbers with $(a, n) = 1$ and let $k = \ord_n(a)$.  Let $m$ be any arbitrary natural number.  We will show that $a^m$ is congruent modulo $n$ to one of the numbers~$a^1$, $a^2$, $\hdots$, $a^k$.  If $m \leq k$, then $a^m \equiv a^m \pmod{n}$ so we're done.  In the case that $m > k$, use the division algorithm to find two integers $q$Let $a$ and $n$ be natural numbers with $(a, n) = 1$. Then
-$\ord_n(a) < n$. and $r$ such that $m = qk + r$ where $0 \leq r < k$.  If $r = 0$, then let $s = q - 1$ and $t = k$, otherwise let $s = q$ and $t = r$. So $m = sk + t$ and $0 < t \leq k$.   Now $a^{sk} = (a^k)^s$, and because $a^k \equiv 1 \pmod{n}$, we can say by theorem 1.18 that $(a^k)^s \equiv 1^s \pmod{n}$.  Then by theorem 1.??  $a^{ks}a^t \equiv 1a^t \pmod{n}$ or equivalently $a^m \equiv a^t$.  Therefore since $0 < t \leq k$, we have shown that $a^m$ is congruent modulo $n$ to one of the numbers~$a^1$, $a^2$, $\hdots$, $a^k$.
+$\ord_n(a) < n$. and $r$ such that $m = qk + r$ where $0 \leq r < k$.  If $r = 0$, then let $s = q - 1$ and $t = k$, otherwise let $s = q$ and $t = r$. So $m = sk + t$ and $0 < t \leq k$.   Now $a^{sk} = (a^k)^s$, and because $a^k \equiv 1 \pmod{n}$, we can say by theorem 1.18 that $(a^k)^s \equiv 1^s \pmod{n}$.  Then by theorem 1.14  $a^{ks}a^t \equiv 1a^t \pmod{n}$ or equivalently $a^m \equiv a^t$.  Therefore since $0 < t \leq k$, we have shown that $a^m$ is congruent modulo $n$ to one of the numbers~$a^1$, $a^2$, $\hdots$, $a^k$.
 \end{proof}
 
 %%%Theorem 4.10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,7 +119,7 @@ Let $a$ and $n$ be natural numbers with $(a, n) = 1$, let $k =
 \pmod{n}$ if and only if $k|m$.
 \end{thm}
 \begin{proof}[Proof]
-Let $a$ and $n$ be natural numbers with $(a, n) = 1$, let $k = \ord_n(a)$, and let $m$ be a natural number.  Use the division algorithm to find integers $q$ and $r$ such that $m = qk + r$ where $0 \leq r < k$.  Then $a^{qk} = (a^k)^q$ and since $a^k \equiv 1 \pmod{n}$,  by theorem 1.18 $(a^k)^q \equiv 1^q \pmod{n}$.  By theorem 1.??  $a^{qk}a^r \equiv 1a^r \pmod{n}$ and $a^m \equiv a^r \pmod{n}$.\\
+Let $a$ and $n$ be natural numbers with $(a, n) = 1$, let $k = \ord_n(a)$, and let $m$ be a natural number.  Use the division algorithm to find integers $q$ and $r$ such that $m = qk + r$ where $0 \leq r < k$.  Then $a^{qk} = (a^k)^q$ and since $a^k \equiv 1 \pmod{n}$,  by theorem 1.18 $(a^k)^q \equiv 1^q \pmod{n}$.  By theorem 1.14  $a^{qk}a^r \equiv 1a^r \pmod{n}$ and $a^m \equiv a^r \pmod{n}$.\\
 
  
 If $k \mid m$, then $r$ will equal $0$, so $a^r = 1$ and $a^m \equiv 1 \pmod{n}$.\\
