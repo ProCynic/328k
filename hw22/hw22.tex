@@ -1,0 +1,111 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 22: 4.13 - 4.16\\
+M328K \\
+April 12th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{4}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{12}
+
+%%%Theorem 4.13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ be a prime and let $a$ be an integer not divisible by $p$;
+that is, $(a, p) = 1$.  Then $\{a, 2a, 3a, \hdots, pa\}$ is a
+complete residue system modulo $p$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 4.14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ be a prime and let $a$ be an integer not divisible by $p$.
+Then
+\[a \cdot 2a \cdot 3a \cdot \hdots \cdot (p-1)a \equiv
+    1 \cdot 2 \cdot 3 \cdot \hdots \cdot (p-1) \pmod{p}.\]
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 4.15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Fermat's Little Theorem, Version I]
+If $p$ is a prime and $a$ is an integer relatively prime to $p$,
+then $a^{(p-1)} \equiv 1 \pmod{p}$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 4.16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Fermat's Little Theorem, Version II]
+If $p$ is a prime and $a$ is \emph{any} integer, then $a^p \equiv a
+\pmod{p}$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+\end{document}
