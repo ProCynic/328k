@@ -2,7 +2,7 @@ HW=22
 
 all: hw$(HW).tex
 	@echo "Making PDF"
-	@pdflatex hw$(HW).tex && evince hw$(HW).pdf
+	@pdflatex hw$(HW).tex && evince hw$(HW).pdf &
 
 clean: 
 	@echo "Cleaning"
