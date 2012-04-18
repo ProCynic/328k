@@ -1,0 +1,127 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 23: 4.18 - 4.23\\
+M328K \\
+April 19th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{4}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{17}
+
+%%%Theorem 4.18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ be a prime and $a$ be an integer. If $(a,p)=1$, then
+$\operatorname{ord}_p(a)$ divides $p-1$, that is,
+$\operatorname{ord}_p(a)| p-1$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Exercise 4.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Compute each of the following without the aid of a calculator or
+computer.
+\begin{enumerate}
+\item $512^{372} \pmod{13}$.
+\item $3444^{3233} \pmod{17}$.
+\item $123^{456} \pmod{23}$.
+\end{enumerate}
+\end{exer}
+\begin{proof}[Solution]
+\end{proof}
+
+%%%Exercise 4.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find the remainder upon division of $314^{159}$ by $31$.
+\end{exer}
+\begin{proof}[Solution]
+\end{proof}
+
+%%%Theorem 4.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $n$ and $m$ be natural numbers that are relatively prime, and
+let $a$ be an integer.  If $x \equiv a \pmod{n}$ and $x \equiv a
+\pmod{m}$, then $x \equiv a \pmod{nm}$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Exercise 4.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Find the remainder when $4^{72}$ is divided by $91$ $(=7\cdot 13)$.
+\end{exer}
+\begin{proof}[Solution]
+\end{proof}
+
+%%%Exercise 4.23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exer}
+Find the natural number $k < 117$ such that $2^{117} \equiv k
+\pmod{117}$. (Notice that $117$ is not prime.)
+\end{exer}
+\begin{proof}[Solution]
+\end{proof}
+\end{document}
