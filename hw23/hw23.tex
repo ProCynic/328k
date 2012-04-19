@@ -50,7 +50,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker - grp352\\
 HW 23: 4.18 - 4.23\\
 M328K \\
 April 19th, 2012 \\}}
@@ -78,6 +78,7 @@ $\operatorname{ord}_p(a)$ divides $p-1$, that is,
 $\operatorname{ord}_p(a)| p-1$.
 \end{thm}
 \begin{proof}[Proof]
+Let $p$ be a prime and $a$ be an integer with $(a,p)=1$.  Let $k = ord_p(a)$.  By Fermat's Little Theorem we know that $a^{p-1} \equiv 1 \pmod{p}$, so by theorem 4.10 $k \mid p-1$.
 \end{proof}
 
 %%%Exercise 4.19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,7 +91,15 @@ computer.
 \item $123^{456} \pmod{23}$.
 \end{enumerate}
 \end{exer}
-\begin{proof}[Solution]
+\begin{proof}[Solution]$ $\\
+\begin{enumerate}
+\item
+We know that $13 - 1 = 12$ and $372 = 31 * 12$, so $ord_{13}(512) \mid 372$.\\  Therefore $512^{372} \pmod{13} = 1$.
+\item
+$3444^{3233} \pmod{17}$.
+\item
+$123^{456} \pmod{23}$.
+\end{enumerate}
 \end{proof}
 
 %%%Exercise 4.20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,6 +109,7 @@ Find the remainder upon division of $314^{159}$ by $31$.
 \begin{proof}[Solution]
 \end{proof}
 
+\pagebreak
 %%%Theorem 4.21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
 Let $n$ and $m$ be natural numbers that are relatively prime, and
@@ -107,6 +117,7 @@ let $a$ be an integer.  If $x \equiv a \pmod{n}$ and $x \equiv a
 \pmod{m}$, then $x \equiv a \pmod{nm}$.
 \end{thm}
 \begin{proof}[Proof]
+  Let $n$ and $m$ be natural numbers with $(n, m) = 1$.  Let $a$ and $x$ be integers with $x \equiv a \pmod{n}$ and $x \equiv a \pmod{m}$.  So $n \mid x - a$ and $m \mid x - a$.  So by theorem 1.42 $nm \mid x - a$.  Therefore $x \equiv a \pmod{nm}$.
 \end{proof}
 
 %%%Exercise 4.22%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
