@@ -45,9 +45,6 @@
 
 \begin{document}
 
-
-
-
 \thispagestyle{plain}
 \begin{flushright}
 \large{\textbf{Geoffrey Parker - grp352 \\
@@ -84,6 +81,7 @@ $\phi(12) = 4$.
 \end{enumerate}
 \end{ques}
 \begin{proof}[Answer]
+$\phi(7) = 6; \phi(15) = 8; \phi(21) = 12; \phi(35) = 24$
 \end{proof}
 
 \setcounter{thm}{30}
@@ -98,14 +96,24 @@ numbers less than or equal to~$\phi(n)$.  Then~$ax_i \not \equiv
 ax_j \pmod{n}$.
 \end{thm}
 \begin{proof}[Proof]
+Let $n$ be a natural number and let $x_1$, $x_2$, $\hdots$, $x_{\phi(n)}$ be the distinct natural numbers less than or equal to $n$ that are relatively prime to $n$.  Let $a$ be a non-zero integer relatively prime to $n$ and let $i$ and $j$ be different natural numbers less than or equal to~$\phi(n)$.  Assume by way of contradiction that $ax_i \equiv ax_j \pmod{n}$.  So by theorem 4.5, because $(a, n) = 1$, $x_i \equiv x_j \pmod{n}$.  However, since $x_i$ and $x_j$ are less than $n$, they are elements of the canonical complete residue system modulo $n$.  So by the definition of complete residue sytstems $x_i \not \equiv x_j \pmod{n}$ and we have a contradiction.  Therefore $ax_i \not \equiv ax_j \pmod{n}$.
 \end{proof}
 
+\pagebreak
 %%%Theorem 4.32%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}[Euler's Theorem]
 If $a$ and $n$ are integers with $n > 0$ and $(a, n) = 1$, then \[
 a^{\phi(n)} \equiv 1 \pmod{n}. \]
 \end{thm}
 \begin{proof}[Proof]
+Let $a$ and $n$ be integers with $n > 0$ and $(a, n) = 1$.  Let $x_1$, $x_2$, $\hdots$, $x_{\phi(n)}$ be the distinct natural numbers less than or equal to $n$ that are relatively prime to $n$. Let $S = \{ax_1, ax_2, \hdots , ax_{\phi(n)}\}$.  Then each element $ax_i$ of $S$ must be congruent modulo $n$ to some element $y_i$ of the canonical complete residue system modulo $n$.  Because $(n, x_i) = 1$ and $(n, a) = 1$ theorem 2.29 says $(n, ax_i) = 1$.  And by theorem 4.3 $(y_i, n) = 1)$  So the set of $y$'s is just the set of $x$'s with possibly different indicies.\\
+
+Now we will show by induction that $a^{\phi(n)}x_1x_2\cdots x_{\phi(n)} \equiv y_1y_2\cdots y_{\phi(n)} \pmod{n}$ and $(y_1y_2\cdots y_{\phi(n)}, n) = 1$.\\
+As a base case, consider $\phi(n) = 1$.  In this case $ax_1 \equiv y_1 \pmod{n}$ and $(x_1, n) = 1$ by definition.\\
+Our induction hypothesis is that there exists some $k$ where $1 \leq k < \phi(n)$, \\$a^kx_1x_2\cdots x_k \equiv y_1y_2\cdots y_k$, and $(y_1y_2\cdots y_k, n) = 1$.\\
+Now given that $ax_{k+1} \equiv y_{k+1}$ by definition of $y_{k+1}$ theorem 1.14 says that \\$a^{k+1}x_1x_2\cdots x_{k+1} \equiv y_1y_2\cdots y_{k+1}$.  And because $(y_1y_2\cdots y_k, n) = 1$ and $(y_{k+1}, n) = 1$, we know by theorem 2.29 that $(y_1y_2\cdots y_{k+1}, n) = 1$.\\
+
+Now because the set of $x$'s is the same as the set of $y$'s the products of the elements of the sets are the same.  We will call this product $t$, and we have just shown that $a^{\phi(n)}t \equiv t \pmod{n}$ and $(t, n) = 1$.  Therefore by theorem 4.5 $a^{\phi(n)} \equiv 1 \pmod{n}$.
 \end{proof}
 
 %%%Theorem 4.33%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,9 +122,10 @@ If $p$ is a prime and $a$ is an integer relatively prime to $p$,
 then $a^{(p-1)} \equiv 1 \pmod{p}$.
 \end{cor}
 \begin{proof}[Proof]
+Let $p$ be a prime and $a$ be an integer relatively prime to $p$.  Then by Euler's Theorem $a^{\phi(p)} \equiv 1 \pmod{p}$.  However, since $p$ is prime, every natural number less than $p$ is coprime with $p$, meaning that $\phi(p) = p - 1$.  Therefore $a^{p-1} \equiv 1 \pmod{p}$.
 \end{proof}
 
-
+\pagebreak
 %%%Exercise 4.34%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{exer}
 Compute each of the following without the aid of a calculator or
@@ -126,7 +135,14 @@ computer.
 \item $139^{112} \pmod{27}$.
 \end{enumerate}
 \end{exer}
-\begin{proof}[Solution]
+\begin{proof}[Solution]$ $\\
+\begin{enumerate}
+\item
+TODO
+
+\item
+TODO
+\end{enumerate}
 \end{proof}
 
 %%%Exercise 4.35%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,5 +151,7 @@ Find the last digit in the base $10$ representation of the integer
 $13^{474}$.
 \end{exer}
 \begin{proof}[Solution]
+This is the same as $13^{474} \pmod{10}$.  Note that $(13, 10) = 1$ and $\phi(10) = 4$.  So by Euler's Theorem $13^4 \equiv 1 \pmod{10}$.  And $474 = 4 \cdot 118 + 2$, so:
+\[13^{474} \equiv 13^{4\cdot 118 + 2} \equiv (13^4)^{118}\cdot 13^2 \equiv 1\cdot 13^2\\ \equiv 169 \equiv 9 \pmod{10}\]
 \end{proof}
 \end{document}
