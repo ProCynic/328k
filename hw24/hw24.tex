@@ -138,10 +138,12 @@ computer.
 \begin{proof}[Solution]$ $\\
 \begin{enumerate}
 \item
-TODO
+First, $12^{49} \equiv 0 \pmod{3}$ and $\phi(5) = 4$. So $12^4 \equiv 1 \pmod{5}$ and $12^{49} \equiv 12^1 \equiv 2 \pmod{5}$.  Then we have $12^{49} \equiv 12 \pmod{3}$ and $12^{49} \equiv 12 \pmod{5}$, so by theorem 4.21 $12^{49} \equiv 12 \pmod{15}$
 
 \item
-TODO
+$27 = 3^3$ and $3 \nmid 139$ so $(27, 139) = 1$.  The natural numbers coprime to 27 are those which 3 does not divide.  So $\phi(27) = 26 - 8 = 18$.  Then Euler's Theorem says $139^{18} \equiv 1 \pmod{n}$, and $112 = 6\cdot 18 + 4$, which gives us:
+ \[139^{112} \equiv (139^{18})^6\cdot 139^4 \equiv 139^4 \pmod{27}\]
+And since $139 = 5\cdot 27 + 4$, $139 \equiv 4 \pmod{27}$.  Then by theorem 1.18 $139^4 \equiv 4^4 \pmod{27}$.  Therefore $139^{112} \equiv 16 \pmod{27}$.
 \end{enumerate}
 \end{proof}
 
