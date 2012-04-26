@@ -134,6 +134,6 @@ If $n$ is a natural number such that $(n - 1)! \equiv -1 \pmod{n}$,
 then $n$ is prime.
 \end{thm}
 \begin{proof}[Proof]
-Let $n$ be a natural number with $(n - 1)! \equiv -1 \pmod{n}$.  Because $p \mid p$, also $p \mid p-1 - (-1)$, so by the definition of congruence $n-1 \equiv -1 \pmod{n}$ and $(n - 1)! \equiv n-1 \pmod{n}$.  And by 2.32 $(n-1, n) = 1$, so by theorem 4.3 $((n-1)!, n) = 1$.  Assume by way of contradiction that $n$ is composite.  Then by the Fundamental Theorem of Algebra $n$ has a prime factorization.  So each prime $p$ in the prime factorization of $n$, by the definition of factorial $p \mid (n-1)!$.  So any of these $p$'s will divide $(n, (n-1)!)$ and this gcd cannot be 1.  Therefore we have a contradiction, so $n$ must be prime.
+Let $n$ be a natural number with $(n - 1)! \equiv -1 \pmod{n}$.  Because $p \mid p$, also $p \mid p-1 - (-1)$, so by the definition of congruence $n-1 \equiv -1 \pmod{n}$ and $(n - 1)! \equiv n-1 \pmod{n}$.  And by 2.32 $(n-1, n) = 1$, so by theorem 4.3 $((n-1)!, n) = 1$.  Assume by way of contradiction that $n$ is composite.  Then by definition of comosite there exist natural numbers $a$ and $b$ where $1 < a, b < n$ and $n = ab$.  So $a \mid n$.  However, by the definition of factorial $a \mid (n-1)!$.  So $a$ must divide $((n-1)!, n)$, which means that this gcd cannot be 1.  Therefore we have a contradiction, so $n$ must be prime.
 \end{proof}
 \end{document}
