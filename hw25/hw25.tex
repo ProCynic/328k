@@ -1,0 +1,139 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+\newcommand{\card}[1]{\left| #1 \right|}
+
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{Geoffrey Parker - grp352 \\
+HW 25: 4.36 - 4.42\\
+M328K \\
+April 26th, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{4}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{35}
+
+%%%Theorem 4.36%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ be a prime and let $a$ be an integer such that $1 \leq a <
+p$.  Then there exists a unique natural number $b$ less than $p$
+such that $ab \equiv 1 \pmod{p}$.
+\end{thm}
+\begin{proof}[Proof]
+Let $p$ be a prime and let $a$ be an integer such that $1 \leq a < p$.  Then by theorem 4.13 $S = \{a, 2a, \dots, pa\}$ is a complete residue system modulo $p$.  So by definition of complete residue systems, one, being an integer, is congruent modulo $p$ to exactly one element of $S$, call it $t$.  So $t = ab$ where $b \leq p$ is a natural number.  However $ap \equiv 0 \pmod{p}$ so $b$ cannot be $p$.  Therefore there exists a unique natural number $b$ less than $p$ such that $ab \equiv 1 \pmod{p}$.
+\end{proof}
+
+%%%Exercise 4.37%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Let $p$ be a prime. Show that the natural numbers $1$ and $p-1$ are
+their own inverses modulo $p$.
+\end{exer}
+\begin{proof}[Solution]$ $\\
+$1 \cdot 1 = 1$ and $1 \equiv 1 \pmod{p}$.\\
+$(p-1)(p-1) = p^2 - 2p + 1$.  And since $p^2 \equiv 0 \pmod{p}$ and $2p \equiv 0 \pmod{p}$, we know $p^2 - 2p + 1 \equiv 1 \pmod{p}$.
+\end{proof}
+
+%%%Theorem 4.38%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ be a prime and let $a$ and $b$ be integers such that $1 < a, b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Then $a \neq b$.
+\end{thm}
+\begin{proof}[Proof]
+Let $p$ be a prime and let $a$ and $b$ be integers such that $1 < a, b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Assume by way of contradiction that $a = b$.  Then $aa \equiv 1 \pmod{p}$ and $p \mid aa - 1$ or equivalently $p \mid (a + 1)(a - 1)$.  So by theorem 2.27 $p \mid a + 1$ or $p \mid a - 1$.  However, since $1 < a < p-1$ both of these are natural numbers less than $p$, so $p$ cannot divide either.  Therefore we have a contradiction and have shown that $a \neq b$.
+\end{proof}
+
+%%Exercise 4.39%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+ Find all pairs of numbers $a$ and $b$ in
+$\{2, 3, \dots, 11\}$ such that $ab \equiv 1 \pmod{13}$.
+\end{exer}
+\begin{proof}[Solution]
+2, 7; 3, 9; 4, 10; 5, 8; 6, 11
+\end{proof}
+
+%%%Theorem 4.40%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+If $p$ is a prime larger than $2$, then $2 \cdot 3 \cdot 4 \cdot
+\hdots \cdot (p-2) \equiv 1 \pmod{p}$.
+\end{thm}
+\begin{proof}[Proof]
+Let $p$ be a prime larger than 2.  Let $S$ be the set of numbers $\{2, 3, 4, \dots , (p-2)\}$.  Note that each element of $S$ is coprime with $p$.  By theorem 4.36 each element $a$ of $S$ has some natural number $b < p$ such that $ab \equiv 1 \pmod{p}$.  But $b$ cannot be 1 because that would imply that $p \mid a - 1$.  And if $b = p-1$ then $p \mid ap - a$, and since $p\mid ap$ then by theorem 1.1 $p \mid a$.  Since $1 < a < p-1$, neither of these can be true, so $b$ must be an element of the set $S$.  And by theorem 4.38 $a \neq b$.  So we can break the set $S$ into $n$ distinct $a$, $b$ pairs where $ab \equiv 1 \pmod{p}$ and $\card{S} = 2n$.  Then $2 \cdot 3 \cdot 4 \cdot \hdots \cdot (p-2) \equiv 1 \pmod{p}$ can be rewritten as $a_1b_1a_2b_2\dots a_nb_n$.  Since each of these pairs is congruent modulo $p$ to one, the entire product is congruent modulo $p$ to one.  Therefore $2 \cdot 3 \cdot 4 \cdot \hdots \cdot (p-2) \equiv 1 \pmod{p}$.
+\end{proof}
+
+%%%Theorem 4.41%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}[Wilson's Theorem]
+If $p$ is a prime, then $(p - 1)! \equiv -1 \pmod{p}$.
+\end{thm}
+\begin{proof}[Proof]
+Let $p$ be prime.  Note that $(p - 1)! = 1(2\cdot 3\cdot \hdots \cdot p-2)(p-1)$.  By theorem 4.40 $(2\cdot 3\cdot \hdots \cdot p-2) \equiv 1 \pmod{p}$.  So $(p-1)! \equiv p-1 \pmod{p}$.  And because $p \mid p$, also $p \mid p-1 - (-1)$, so by the definition of congruence $p-1 \equiv -1 \pmod{p}$.  Therefore by theorem 1.11 $(p - 1)! \equiv -1 \pmod{p}$.
+\end{proof}
+
+%%%Theorem 4.42%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}[Converse of Wilson's Theorem]
+If $n$ is a natural number such that $(n - 1)! \equiv -1 \pmod{n}$,
+then $n$ is prime.
+\end{thm}
+\begin{proof}[Proof]
+Let $n$ be a natural number with $(n - 1)! \equiv -1 \pmod{n}$.  Because $p \mid p$, also $p \mid p-1 - (-1)$, so by the definition of congruence $n-1 \equiv -1 \pmod{n}$ and $(n - 1)! \equiv n-1 \pmod{n}$.  And by 2.32 $(n-1, n) = 1$, so by theorem 4.3 $((n-1)!, n) = 1$.  Assume by way of contradiction that $n$ is composite.  Then by definition of comosite there exist natural numbers $a$ and $b$ where $1 < a, b < n$ and $n = ab$.  So $a \mid n$.  However, by the definition of factorial $a \mid (n-1)!$.  So $a$ must divide $((n-1)!, n)$, which means that this gcd cannot be 1.  Therefore we have a contradiction, so $n$ must be prime.
+\end{proof}
+\end{document}
