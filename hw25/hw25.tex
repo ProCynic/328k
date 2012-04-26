@@ -39,6 +39,8 @@
 \newcommand{\lcm}{\operatorname{lcm}}
 \newcommand{\ord}{\operatorname{ord}}
 \def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+\newcommand{\card}[1]{\left| #1 \right|}
+
 
 
 \makeindex
@@ -50,7 +52,7 @@
 
 \thispagestyle{plain}
 \begin{flushright}
-\large{\textbf{TYPE YOUR NAME HERE \\
+\large{\textbf{Geoffrey Parker - grp352 \\
 HW 25: 4.36 - 4.42\\
 M328K \\
 April 26th, 2012 \\}}
@@ -78,6 +80,7 @@ p$.  Then there exists a unique natural number $b$ less than $p$
 such that $ab \equiv 1 \pmod{p}$.
 \end{thm}
 \begin{proof}[Proof]
+Let $p$ be a prime and let $a$ be an integer such that $1 \leq a < p$.  Then by theorem 4.13 $S = \{a, 2a, \dots, pa\}$ is a complete residue system modulo $p$.  So by definition of complete residue systems, one, being an integer, is congruent modulo $p$ to exactly one element of $S$, call it $t$.  So $t = ab$ where $b \leq p$ is a natural number.  However $ap \equiv 0 \pmod{p}$ so $b$ cannot be $p$.  Therefore there exists a unique natural number $b$ less than $p$ such that $ab \equiv 1 \pmod{p}$.
 \end{proof}
 
 %%%Exercise 4.37%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,15 +88,17 @@ such that $ab \equiv 1 \pmod{p}$.
 Let $p$ be a prime. Show that the natural numbers $1$ and $p-1$ are
 their own inverses modulo $p$.
 \end{exer}
-\begin{proof}[Solution]
+\begin{proof}[Solution]$ $\\
+$1 \cdot 1 = 1$ and $1 \equiv 1 \pmod{p}$.\\
+$(p-1)(p-1) = p^2 - 2p + 1$.  And since $p^2 \equiv 0 \pmod{p}$ and $2p \equiv 0 \pmod{p}$, we know $p^2 - 2p + 1 \equiv 1 \pmod{p}$.
 \end{proof}
 
 %%%Theorem 4.38%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thm}
-Let $p$ be a prime and let $a$ and $b$ be integers such that $1 <
-a,b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Then $a \neq b$.
+Let $p$ be a prime and let $a$ and $b$ be integers such that $1 < a, b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Then $a \neq b$.
 \end{thm}
 \begin{proof}[Proof]
+Let $p$ be a prime and let $a$ and $b$ be integers such that $1 < a, b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Assume by way of contradiction that $a = b$.  Then $aa \equiv 1 \pmod{p}$ and $p \mid aa - 1$ or equivalently $p \mid (a + 1)(a - 1)$.  So by theorem 2.27 $p \mid a + 1$ or $p \mid a - 1$.  However, since $1 < a < p-1$ both of these are natural numbers less than $p$, so $p$ cannot divide either.  Therefore we have a contradiction and have shown that $a \neq b$.
 \end{proof}
 
 %%Exercise 4.39%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -102,6 +107,7 @@ a,b < p-1$ and~\mbox{$ab \equiv 1 \pmod{p}$}. Then $a \neq b$.
 $\{2, 3, \dots, 11\}$ such that $ab \equiv 1 \pmod{13}$.
 \end{exer}
 \begin{proof}[Solution]
+2, 7; 3, 9; 4, 10; 5, 8; 6, 11
 \end{proof}
 
 %%%Theorem 4.40%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,6 +116,7 @@ If $p$ is a prime larger than $2$, then $2 \cdot 3 \cdot 4 \cdot
 \hdots \cdot (p-2) \equiv 1 \pmod{p}$.
 \end{thm}
 \begin{proof}[Proof]
+Let $p$ be a prime larger than 2.  Let $S$ be the set of numbers $\{2, 3, 4, \dots , (p-2)\}$.  Note that each element of $S$ is coprime with $p$.  By theorem 4.36 each element $a$ of $S$ has some natural number $b < p$ such that $ab \equiv 1 \pmod{p}$.  But $b$ cannot be 1 because that would imply that $p \mid a - 1$.  And if $b = p-1$ then $p \mid ap - a$, and since $p\mid ap$ then by theorem 1.1 $p \mid a$.  Since $1 < a < p-1$, neither of these can be true, so $b$ must be an element of the set $S$.  And by theorem 4.38 $a \neq b$.  So we can break the set $S$ into $n$ distinct $a$, $b$ pairs where $ab \equiv 1 \pmod{p}$ and $\card{S} = 2n$.  Then $2 \cdot 3 \cdot 4 \cdot \hdots \cdot (p-2) \equiv 1 \pmod{p}$ can be rewritten as $a_1b_1a_2b_2\dots a_nb_n$.  Since each of these pairs is congruent modulo $p$ to one, the entire product is congruent modulo $p$ to one.  Therefore $2 \cdot 3 \cdot 4 \cdot \hdots \cdot (p-2) \equiv 1 \pmod{p}$.
 \end{proof}
 
 %%%Theorem 4.41%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
