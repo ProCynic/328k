@@ -125,6 +125,7 @@ Let $p$ be a prime larger than 2.  Let $S$ be the set of numbers $\{2, 3, 4, \do
 If $p$ is a prime, then $(p - 1)! \equiv -1 \pmod{p}$.
 \end{thm}
 \begin{proof}[Proof]
+Let $p$ be prime.  Note that $(p - 1)! = 1(2\cdot 3\cdot \hdots \cdot p-2)(p-1)$.  By theorem 4.40 $(2\cdot 3\cdot \hdots \cdot p-2) \equiv 1 \pmod{p}$.  So $(p-1)! \equiv p-1 \pmod{p}$.  And because $p \mid p$, also $p \mid p-1 - (-1)$, so by the definition of congruence $p-1 \equiv -1 \pmod{p}$.  Therefore by theorem 1.11 $(p - 1)! \equiv -1 \pmod{p}$.
 \end{proof}
 
 %%%Theorem 4.42%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,5 +134,6 @@ If $n$ is a natural number such that $(n - 1)! \equiv -1 \pmod{n}$,
 then $n$ is prime.
 \end{thm}
 \begin{proof}[Proof]
+Let $n$ be a natural number with $(n - 1)! \equiv -1 \pmod{n}$.  Because $p \mid p$, also $p \mid p-1 - (-1)$, so by the definition of congruence $n-1 \equiv -1 \pmod{n}$ and $(n - 1)! \equiv n-1 \pmod{n}$.  And by 2.32 $(n-1, n) = 1$, so by theorem 4.3 $((n-1)!, n) = 1$.  Assume by way of contradiction that $n$ is composite.  Then by the Fundamental Theorem of Algebra $n$ has a prime factorization.  So each prime $p$ in the prime factorization of $n$, by the definition of factorial $p \mid (n-1)!$.  So any of these $p$'s will divide $(n, (n-1)!)$ and this gcd cannot be 1.  Therefore we have a contradiction, so $n$ must be prime.
 \end{proof}
 \end{document}
