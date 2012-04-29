@@ -1,0 +1,165 @@
+
+\documentclass[11pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein \textwidth=6.0truein \hoffset=-.5truein
+\voffset=-.5truein \numberwithin{equation}{section}
+\pagestyle{headings} \footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{Name \\
+M328K - MWF \\
+Chapter 5\\
+DUE DATE \\}}
+\end{flushright}
+
+
+
+\setcounter{tocdepth}{3}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\setcounter{section}{4}
+
+%Here is where you can change what number you want the theorems to start at.  You put one less than the number of the first theorem.
+\setcounter{thm}{0}
+
+
+\section{Public Key Cryptography}
+
+
+\section*{Public Key Codes and RSA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Public key codes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Overview of RSA}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Let's decrypt}
+
+%%%Theorem 5.1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+If $p$ and $q$ are distinct prime numbers and $W$ is a natural
+number with $(W, pq)=1$, then $W^{(p-1)(q-1)}\equiv 1 \pmod{pq}$.
+\end{thm}
+
+%%%Theorem 5.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ and $q$ be distinct primes, $k$ be a natural number, and $W$
+be a natural number less than $pq$. Then
+\[W^{1+k(p-1)(q-1)}\equiv W\pmod{pq}.\]
+\end{thm}
+
+%%%Theorem 5.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ and $q$ be distinct primes and $E$ be a natural number
+relatively prime to $(p-1)(q-1)$. Then there exist natural numbers
+$D$ and $y$ such that
+\[ED = 1+y(p-1)(q-1).\]
+\end{thm}
+
+%%%Theorem 5.4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ and $q$ be distinct primes, $W$ be a natural number less
+than $pq$, and $E$, $D$, and $y$ be natural numbers such that
+$ED=1+y(p-1)(q-1)$. Then
+\[W^{ED}\equiv W\pmod{pq}.\]
+\end{thm}
+
+%%%Exercise 5.5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Consider two distinct primes $p$ and $q$. Describe every step of the
+RSA Public Key Coding System. State what numbers you choose to make
+public, what messages can be encoded, how messages should be
+encoded, and how messages are decoded.  What number should be called
+the \textit{encoding exponent} and what number should be called the
+\textit{decoding exponent}?
+\end{exer}
+
+%%%Exercise 5.6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Describe an RSA Public Key Code System based on the primes $11$ and
+$17$.  Encode and decode several messages.
+\end{exer}
+
+%%%Exercise 5.7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+You are a secret agent. An evil spy with shallow number theory
+skills uses the RSA Public Key Coding System in which the public
+modulus is $n=1537$, and the encoding exponent is $E=47$. You
+intercept one of the encoded secret messages being sent to the evil
+spy, namely the number $570$. Using your superior number theory
+skills, decode this message, thereby saving countless people from
+the fiendish plot of the evil spy.
+\end{exer}
+
+%%%Exercise 5.8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Suppose an RSA Public Key Coding System publishes $n$ (which is
+equal to the product of two undisclosed primes $p$ and $q$) and $E$,
+with $E$ relatively prime to $(p-1)(q-1)$. Suppose someone wants to
+send a secret message and so encodes the message number $W$ (less
+than $n$) by finding the number $m$ less than $n$ such that
+$m\equiv W^E\pmod{n}$. Suppose you intercept this number $m$ and you
+are able to factor $n$. How can you figure out the original message
+$W$?
+\end{exer}
+
+%%%Exercise 5.9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{apex}
+You have seen the application of number theory to RSA cryptography.
+Find out all you can about the role of number theory in some other
+types of ``codes" such as bar codes, ISBN codes, and credit card
+number ``codes".
+\end{apex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}

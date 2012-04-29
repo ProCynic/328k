@@ -1,0 +1,124 @@
+\documentclass[12pt,leqno]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,amsbsy,upref}
+
+
+\textheight=8.5truein
+\textwidth=6.0truein
+\hoffset=-.5truein
+\voffset=-.5truein
+\numberwithin{equation}{section}
+\pagestyle{headings}
+\footskip=36pt
+
+
+\swapnumbers
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{hthm}[thm]{*Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{bpe}[thm]{Blank Paper Exercise}
+\newtheorem{apex}[thm]{Applications Exercise}
+\newtheorem{ques}[thm]{Question}
+\newtheorem{scho}[thm]{Scholium}
+\newtheorem*{Exthm}{Example Theorem}
+\newtheorem*{Thm}{Theorem}
+\newtheorem*{Con}{Conjecture}
+\newtheorem*{Axiom}{Axiom}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{Ex}{Example}
+\newtheorem*{Def}{Definition}
+
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\ord}{\operatorname{ord}}
+\def\pfrac#1#2{{\left(\frac{#1}{#2}\right)}}
+
+
+\makeindex
+
+\begin{document}
+
+
+
+
+\thispagestyle{plain}
+\begin{flushright}
+\large{\textbf{TYPE YOUR NAME HERE \\
+HW 26: 5.1 - 5.5\\
+M328K \\
+May 1st, 2012 \\}}
+\end{flushright}
+
+%\maketitle
+\markboth{}{} \setcounter{section}{0} \baselineskip=18pt
+
+\setcounter{tocdepth}{4}
+
+
+%%%%%%%%This is where you can change the numbering to match the problem you
+%%%%%%%%are on.  Set the section to  the current chapter.
+
+\setcounter{section}{5}
+
+%%%%%%%%%Now, set the theorem number to one less than the first theorem in
+%%%%%%%%%the assignment.
+\setcounter{thm}{0}
+
+%%%Theorem 5.1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+If $p$ and $q$ are distinct prime numbers and $W$ is a natural
+number with $(W, pq)=1$, then $W^{(p-1)(q-1)}\equiv 1 \pmod{pq}$.
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 5.2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thm}
+Let $p$ and $q$ be distinct primes, $k$ be a natural number, and $W$
+be a natural number less than $pq$. Then
+\[W^{1+k(p-1)(q-1)}\equiv W\pmod{pq}.\]
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 5.3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ and $q$ be distinct primes and $E$ be a natural number
+relatively prime to $(p-1)(q-1)$. Then there exist natural numbers
+$D$ and $y$ such that
+\[ED = 1+y(p-1)(q-1).\]
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Theorem 5.4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thm}
+Let $p$ and $q$ be distinct primes, $W$ be a natural number less
+than $pq$, and $E$, $D$, and $y$ be natural numbers such that
+$ED=1+y(p-1)(q-1)$. Then
+\[W^{ED}\equiv W\pmod{pq}.\]
+\end{thm}
+\begin{proof}[Proof]
+\end{proof}
+
+%%%Exercise 5.5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exer}
+Consider two distinct primes $p$ and $q$. Describe every step of the
+RSA Public Key Coding System. State what numbers you choose to make
+public, what messages can be encoded, how messages should be
+encoded, and how messages are decoded.  What number should be called
+the \textit{encoding exponent} and what number should be called the
+\textit{decoding exponent}?
+\end{exer}
+\begin{proof}[Solution]
+\end{proof}
+\end{document}
